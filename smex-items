@@ -1,0 +1,31 @@
+
+;; ----- smex-history -----
+(
+ eval-buffer
+ list-packages
+ shell
+ winner-mode
+ top-level
+ load-theme
+ smartparens-mode
+)
+
+;; ----- smex-data -----
+(
+ (smartparens-mode . 3)
+ (eval-buffer . 63)
+ (window-numbering-mode . 1)
+ (split-window-below . 1)
+ (split-window-right . 1)
+ (list-packages . 9)
+ (top-level . 2)
+ (helm-M-x . 2)
+ (helm-buffers-list . 1)
+ (company-mode . 1)
+ (buffer-menu . 1)
+ (shell . 6)
+ (load-theme . 11)
+ (enable-theme . 1)
+ (winner-mode . 1)
+ (turn-off-evil-mode . 2)
+)
