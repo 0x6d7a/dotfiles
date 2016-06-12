@@ -27,6 +27,7 @@
 
 
 ;; BASIC CUSTOMIZATION
+(setq inhibit-splash-screen t)
 (setq inhibit-startup-buffer-menu)
 (load-theme 'misterioso t)
 (tool-bar-mode -1)
@@ -90,6 +91,10 @@
 (global-set-key (kbd "C-x m") 'helm-M-x)
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
+
+;; ORG
+(require 'org)
+(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 
 ;; MAGIT
 (global-set-key (kbd "C-x g") 'magit-status)
