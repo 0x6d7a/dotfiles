@@ -1,8 +1,10 @@
 ;; PACKAGE INITIALIZATION
 (require 'package)
-(package-initialize)
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
-;;(add-to-list 'package-archives '("melpa-stable" . "http://melpa.milkbox.net/packages/") t)
+(add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/") t)
+(add-to-list 'load-path "~/.emacs.d/plugin/")
+(package-initialize)
+
 
 (defvar myPackages
   '(better-defaults
@@ -11,11 +13,17 @@
     magit
     neotree
     yasnippet
+;;    company-mode
     window-numbering
     smart-mode-line
     smex
+    markdown-mode
+;;    exec-path-from-shell-copy
     smartparens
     helm
+    multiple-cursors
+    expand-region
+    helm-swoop
     ace-jump-mode
     expand-region
 	material-theme))
@@ -69,10 +77,28 @@
 (global-set-key (kbd "C-=") 'er/expand-region)
 
 ;; EVIL
+(require 'evil)
+(defun toggle-evil-mode ()
+  (interactive)
+  (if (bound-and-true-p evil-local-mode)
+      (progn
+        (evil-local-mode (or -1 1))
+        (undo-tree-mode (or -1 1))
+        (set-variable 'cursor-type 'bar)
+        )
+    (progn
+      (evil-local-mode (or 1 1))
+      (set-variable 'cursor-type 'box)
+      )
+    )
+  )
+(global-set-key (kbd "M-u") 'toggle-evil-mode)
 ;;(require 'evil)
-;(evil-mode 1)
+;;(evil-mode 1)
+;;(global-set-key (kbd "C-e") 'turn-on-evil-mode)
+;;(global-set-key (kbd "C-e C-e") 'turn-off-evil-mode)
 
-;; FLYMAKE
+;; Flymake
 (require 'flymake)
 
 ;; HELM
@@ -96,6 +122,9 @@
 (require 'org)
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 
+;; MARKDOWN PREVIEW EWW
+(require 'markdown-preview-eww)
+
 ;; MAGIT
 (global-set-key (kbd "C-x g") 'magit-status)
 
@@ -109,6 +138,11 @@
 ;; NEOTREE
 (require 'neotree)
 (global-set-key (kbd "C-t") 'neotree-toggle)
+
+;; SKEWER MODE
+(add-hook 'html-mode-hook 'skewer-mode)
+(add-hook 'js2-mode-hook 'skewer-mode)
+(add-hook 'css-mode-hook 'skewer-mode)
 
 ;; SMART MODE LINE
 (require 'smart-mode-line)
@@ -133,8 +167,24 @@
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command) ;; This is the old M-x
 
+;; WEB MODE
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.[agj]sp\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
+(setq web-mode-enable-current-column-highlight t)
+(setq web-mode-enable-current-element-highlight t)
+
 ;; WINDOW NUMBERING
 (window-numbering-mode 1)
+
+;; WINNER MODE
+(winner-mode 1)
 
 ;; YASNIPPET
 (require 'yasnippet)
