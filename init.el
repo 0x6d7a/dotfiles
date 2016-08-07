@@ -17,7 +17,7 @@
     magit
     neotree
     yasnippet
-;;    company-mode
+    company
     window-numbering
     smart-mode-line
     smex
@@ -25,6 +25,7 @@
 ;;    exec-path-from-shell-copy
     smartparens
     helm
+    sublime-themes
     multiple-cursors
     expand-region
     helm-swoop
@@ -42,19 +43,12 @@
 (setq inhibit-splash-screen t)
 (setq inhibit-startup-buffer-menu)
 ;; theme
-;; (load-theme 'misterioso t)
-;; (load-theme 'zenburn t)
-;; (load-theme 'ujelly t)
-;; (load-theme 'solarized t)
-;; (load-theme 'monokai t)
 (load-theme 'spolsky t)
-;; (require 'color-theme-sanityinc-tomorrow)
 (global-set-key (kbd "<f5>") 'redraw-display)
-(setq visible-bell nil)
-;; (setq ring-bell-function 'ignore)
-(setq ring-bell-function (lambda()
-                           (invert-face 'mode-line)
-                           (run-with-timer 0.1 nil 'invert-face 'mode-line)))
+;;(setq visible-bell nil)
+;;(setq ring-bell-function (lambda()
+  ;;                         (invert-face 'mode-line)
+  ;;                         (run-with-timer 0.1 nil 'invert-face 'mode-line)))
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
@@ -76,17 +70,6 @@
 (define-key global-map (kbd "C-c u") 'ace-jump-word-mode)
 (define-key global-map (kbd "C-c C-u") 'ace-jump-char-mode)
 (define-key global-map (kbd "C-c C-c C-u") 'ace-jump-line-mode)
-
-;; AUTO-COMPLETE
-(global-auto-complete-mode t)
-
-;; AUTOPAIR
-;; (autopair-global-mode t)
-
-;; AC-JS2
-(add-hook 'js2-mode-hook 'ac-js2-mode)
-(setq ac-js2-evaluate-calls t)
-
 
 ;; COMPANY
 (add-hook 'after-init-hook 'global-company-mode)
@@ -129,9 +112,6 @@
 (global-set-key (kbd "M-u") 'toggle-evil-mode)
 (evil-mode t)
 
-;; Flymake
-(require 'flymake)
-
 ;; HELM
 (require 'helm)
 (require 'helm-config)
@@ -159,6 +139,11 @@
 (add-to-list 'interpreter-mode-alist '("node" . js2-mode))
 
 
+;; KEY-CHORD
+;; (require 'key-chord)
+;; (key-chord-mode 1)
+;; (key-chord-define-global "" (kbd "<escape>"))
+
 ;; ORG
 (add-to-list 'auto-mode-alist '("\\.\\(org\\|org_archive\\|txt\\)$" . org-mode))
 (require 'org)
@@ -172,13 +157,39 @@
    (perl . t)
    (C . t))
  )
+(setq org-directory "~/Dropbox/Org")
+(setq org-default-notes-file (concat org-directory "/notes.org"))
+(setq org-log-done 'time)
+(setq org-export-coding-system 'utf-8)
+(setq org-latex-inputenc-alist '(("utf8" . "utf8x")))
 ;; Standard key bindings
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-ca" 'org-agenda)
-(global-set-key "\C-cb" 'org-iswitchb)
+(global-set-key "\C-cb" 'org-switchb)
+(global-set-key "\C-cc" 'org-capture)
+(global-set-key (kbd "C-c o")
+                (lambda () (interactive) (find-file "~/Dropbox/Org/refiles.org")))
+;; Org capture templates
+(setq org-capture-templates
+      (quote (("t" "Tasks" entry
+               (file+headline "~/Dropbox/Org/refiles.org" "Inbox")
+               "* TODO %^{Task}\nSCHEDULED: %^t\n%?\n")
+              ("T" "Quick Tasks" entry
+               (file+headline "~/Dropbox/Org/refiles.org" "Inbox")
+               "* TODO %^{Task}\nSCHEDULED: %t\n"
+               :immediate-finish t)
+              ("n" "Notes" entry
+               (file+headline "~/Dropbox/Org/refiles.org" "Notes")
+               "* %^{Note} \n%U\n%?")
+              ("N" "Quick Notes" item
+               (file+headline "~/Dropbox/Org/refiles.org" "Quick Notes"))
+              ("j" "Journals" plain
+               (file+datetree "~/Dropbox/Personal/journals.org")
+               "**** %U %^{Title}\n%?"
+               :unnarrowed t)
+              )))
 
-;; MARKDOWN PREVIEW EWW
-;; (require 'markdown-preview-eww)
+
 ;; MARKDOWN MODE
 (autoload 'markdown-mode "markdown-mode"
   "Major mode for editing Markdown files" t)
@@ -198,14 +209,6 @@
 ;; NEOTREE
 (require 'neotree)
 (global-set-key (kbd "C-t") 'neotree-toggle)
-
-;; NODEJS-REPL
-(require 'nodejs-repl)
-
-;; SKEWER MODE
-(add-hook 'html-mode-hook 'skewer-mode)
-(add-hook 'js2-mode-hook 'skewer-mode)
-(add-hook 'css-mode-hook 'skewer-mode)
 
 ;; (require 'powerline)
 ;; (powerline-center-theme)
@@ -238,19 +241,10 @@
   (forward-line -1)
   (indent-according-to-mode))
 
-
 ;; SMEX
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command) ;; This is the old M-x
-
-;; TERN
-;; (autoload 'tern-mode "tern.el" nil t)
-;; (eval-after-load 'tern
-;;    '(progn
-;;       (require 'tern-auto-complete)
-;;       (tern-ac-setup)))
-;; (add-hook 'js-mode-hook (lambda () (tern-mode t)))
 
 ;; UNDO-TREE
 (global-set-key (kbd "M-/") 'undo-tree-visualize)
@@ -270,9 +264,6 @@
 
 ;; WINDOW NUMBERING
 (window-numbering-mode 1)
-
-;; WINNER MODE
-(winner-mode 1)
 
 ;; YASNIPPET
 (require 'yasnippet)
@@ -294,9 +285,12 @@
     ("0c29db826418061b40564e3351194a3d4a125d182c6ee5178c237a7364f0ff12" default)))
  '(fci-rule-color "#d6d6d6")
  '(org-hide-emphasis-markers t)
+ '(org-hide-leading-stars t)
  '(org-modules
    (quote
-    (org-bbdb org-bibtex org-docview org-gnus org-habit org-info org-irc org-mhe org-rmail org-w3m))))
+    (org-bbdb org-bibtex org-docview org-gnus org-habit org-info org-irc org-mhe org-rmail org-w3m)))
+ '(org-refile-targets (quote ((org-agenda-files :maxlevel . 6))))
+ '(org-todo-keywords (quote ((sequence "TODO" "STARTED" "DONE" "CANCLED")))))
 
 ;;; sRGB doesn't blend with Powerline's pixmap colors, but is only
 ;;; used in OS X. Disable sRGB before setting up Powerline.
