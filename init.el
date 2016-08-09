@@ -45,10 +45,10 @@
 ;; theme
 (load-theme 'spolsky t)
 (global-set-key (kbd "<f5>") 'redraw-display)
-;;(setq visible-bell nil)
-;;(setq ring-bell-function (lambda()
-  ;;                         (invert-face 'mode-line)
-  ;;                         (run-with-timer 0.1 nil 'invert-face 'mode-line)))
+(setq visible-bell nil)
+(setq ring-bell-function (lambda()
+                         (invert-face 'mode-line)
+                         (run-with-timer 0.1 nil 'invert-face 'mode-line)))
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
@@ -64,7 +64,8 @@
       mac-command-key-is-meta t
       mac-command-modifier 'meta
       mac-option-modifier 'none)
-(visual-line-mode 1)
+(global-visual-line-mode 1)
+(toggle-truncate-lines 1)
 
 ;; ACE JUMP
 (require 'ace-jump-mode)
@@ -169,7 +170,7 @@
 (global-set-key "\C-cb" 'org-switchb)
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key (kbd "C-c o")
-                (lambda () (interactive) (find-file "~/Dropbox/Org/refiles.org")))
+                (lambda () (interactive) (find-file "~/Dropbox/Org/gtd.org")))
 ;; Org capture templates
 (setq org-capture-templates
       (quote (("t" "Tasks" entry
@@ -296,7 +297,7 @@
    (quote
     (org-bbdb org-bibtex org-docview org-gnus org-habit org-info org-irc org-mhe org-rmail org-w3m)))
  '(org-refile-targets (quote ((org-agenda-files :maxlevel . 6))))
- '(org-todo-keywords (quote ((sequence "TODO" "STARTED" "DONE" "CANCLED")))))
+ '(org-todo-keywords (quote ((sequence "TODO" "DOING" "DONE" "CANCLED")))))
 
 ;;; sRGB doesn't blend with Powerline's pixmap colors, but is only
 ;;; used in OS X. Disable sRGB before setting up Powerline.
