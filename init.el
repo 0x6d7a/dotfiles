@@ -45,14 +45,14 @@
 ;; theme
 (load-theme 'spolsky t)
 (global-set-key (kbd "<f5>") 'redraw-display)
-;;(setq visible-bell nil)
-;;(setq ring-bell-function (lambda()
-  ;;                         (invert-face 'mode-line)
-  ;;                         (run-with-timer 0.1 nil 'invert-face 'mode-line)))
+(setq visible-bell nil)
+(setq ring-bell-function (lambda()
+                         (invert-face 'mode-line)
+                         (run-with-timer 0.1 nil 'invert-face 'mode-line)))
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
-(set-face-attribute 'default nil :height 160)
+(set-face-attribute 'default nil :height 140)
 (display-time-mode)
 (global-linum-mode t) ;; Display line number
 (define-key global-map (kbd "M-g") 'goto-line) ;; Modify goto line key
@@ -64,6 +64,9 @@
       mac-command-key-is-meta t
       mac-command-modifier 'meta
       mac-option-modifier 'none)
+(global-visual-line-mode 1)
+(toggle-truncate-lines 1)
+(setq c-default-style "ellemtel" c-basic-offset 4)
 
 ;; ACE JUMP
 (require 'ace-jump-mode)
@@ -168,15 +171,15 @@
 (global-set-key "\C-cb" 'org-switchb)
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key (kbd "C-c o")
-                (lambda () (interactive) (find-file "~/Dropbox/Org/refiles.org")))
+                (lambda () (interactive) (find-file "~/Dropbox/Org/gtd.org")))
 ;; Org capture templates
 (setq org-capture-templates
       (quote (("t" "Tasks" entry
                (file+headline "~/Dropbox/Org/refiles.org" "Inbox")
-               "* TODO %^{Task}\nSCHEDULED: %^t\n%?\n")
+               "* TODO %^{Task}\nDEADLINE: %^t\n%?\n")
               ("T" "Quick Tasks" entry
                (file+headline "~/Dropbox/Org/refiles.org" "Inbox")
-               "* TODO %^{Task}\nSCHEDULED: %t\n"
+               "* TODO %^{Task}\n%t\n"
                :immediate-finish t)
               ("n" "Notes" entry
                (file+headline "~/Dropbox/Org/refiles.org" "Notes")
@@ -189,6 +192,8 @@
                :unnarrowed t)
               )))
 
+(require 'org-bullets)
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 
 ;; MARKDOWN MODE
 (autoload 'markdown-mode "markdown-mode"
@@ -208,7 +213,7 @@
 
 ;; NEOTREE
 (require 'neotree)
-(global-set-key (kbd "C-t") 'neotree-toggle)
+(global-set-key (kbd "<f8>") 'neotree-toggle)
 
 ;; (require 'powerline)
 ;; (powerline-center-theme)
@@ -228,8 +233,8 @@
 ;; SMARTPARENS
 (require 'smartparens-config)
 (add-hook 'html-mode-hook #'smartparens-mode)
-(add-hook 'js-mode-hook #'smartparens-stric-mode)
-(add-hook 'python-mode-hook #'smartparens-stric-mode)
+(add-hook 'js-mode-hook #'smartparens-mode)
+(add-hook 'python-mode-hook #'smartparens-mode)
 (add-hook 'c-mode-hook #'smartparens-mode)
 (add-hook 'markdown-mode-hook #'smartparens-mode)
 (add-hook 'emacs-lisp-mode-hook #'smartparens-mode)
@@ -284,13 +289,16 @@
    (quote
     ("0c29db826418061b40564e3351194a3d4a125d182c6ee5178c237a7364f0ff12" default)))
  '(fci-rule-color "#d6d6d6")
+ '(org-agenda-files
+   (quote
+    ("~/Dropbox/Org/gtd.org" "~/Dropbox/Org/refiles.org")))
  '(org-hide-emphasis-markers t)
  '(org-hide-leading-stars t)
  '(org-modules
    (quote
     (org-bbdb org-bibtex org-docview org-gnus org-habit org-info org-irc org-mhe org-rmail org-w3m)))
  '(org-refile-targets (quote ((org-agenda-files :maxlevel . 6))))
- '(org-todo-keywords (quote ((sequence "TODO" "STARTED" "DONE" "CANCLED")))))
+ '(org-todo-keywords (quote ((sequence "TODO" "DOING" "DONE" "CANCLED")))))
 
 ;;; sRGB doesn't blend with Powerline's pixmap colors, but is only
 ;;; used in OS X. Disable sRGB before setting up Powerline.

@@ -1,0 +1,55 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/Users/mark/.emacs.d/" . ".git/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/Users/mark/Desktop/workbench/Working_log/"
+ "/Users/mark/Desktop/MaxusProjects/LIFXAPI/"
+ "/Users/mark/.emacs.d/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "2016-07-26.md"
+ "ctrl.js"
+ "server.js"
+ "init.el"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/Users/mark/Desktop/workbench/of_v0.9.3_osx_release/apps/rectangleDraw/rectangleDraw/src/" (22470 33408 0 0) "ofApp.h" "ofApp.cpp" "main.cpp" ".#ofApp.cpp" "../" "./")
+
+ ("/Users/mark/Dropbox/Org/" (22439 60761 0 0) "todos.org" "todos.html" "tasks.tex" "tasks.pdf" "tasks.org" "tasks.html" "refiles.org" "product_feature_list.png" "product_feature_list.org" "product_feature_list.html" "Product_definition.tex" "Product_definition.pdf" "Product_definition.org" "Product_definition.html" "presentation.tex" "presentation.pdf" "presentation.org" "notes.tex" "notes.pdf" "notes.org" "Maxus_Product_Definition.png" "img/" "gtd.org" ".DS_Store" "#notes.org#" "../" "./")
+
+ ("/Users/mark/Desktop/workbench/Working_log/" (22423 62869 0 0) "2016-07-27/" "2016-07-26.md" "2016-07-25.md" "2016-07-25/" ".DS_Store" "../" "./")
+
+ ("/Users/mark/Desktop/workbench/Org/" (22413 49833 0 0) "阶段目标.org" "薪酬体系_maxus.org" "todo.org" "Recruitment_overview.org" "Recruitment_20160711.org" ".#todo.org" ".#Recruitment_overview.org" "#todo.org#" "#Recruitment_overview.org#" "../" "./")
+
+ ("/Users/mark/Desktop/Schedules/" (22388 48020 0 0) "20160630.org" "20160629.org_archive" "20160629.org" "20160628.org" ".#20160630.org" "#20160630.org#" "../" "./")
+
+ ("/Users/mark/Desktop/MaxusProjects/KickstarterParser/" (22387 61843 0 0) "test.html" "parse.js" "node_modules/" "comments.html" "../" "./")
+
+ ("/Users/mark/Desktop/MaxusProjects/LIFXAPI/node_parser/" (22385 51169 0 0) "phantom_parse.js" "parse.js" "node_phantom.js" ".#node_phantom.js" "../" "./")
+
+ ("/Users/mark/.emacs.d/" (22383 59493 0 0) "snippets/" "smex-items" "plugin/" "places" "init.el~" "init.el.bk" "init.el" "ido.last" "elpa/" "backups/" "auto-save-list/" ".mc-lists.el" ".git/" "../" "./")
+
+ ("/Users/mark/Desktop/MaxusProjects/LIFXAPI/" (22383 60031 0 0) "server.js" "node_modules/" "jquery.js" "index.html" "ctrl.py" ".tern-port" "../" "./")
+
+ ("/home/" (22373 15149 854703 0) "../" "./")
+
+ ("/Users/mark/" (22373 25217 0 0) "深圳市广懋创新科技有限公司（暂定名）投资协议 201508100530_revised_v2.pdf" "深圳市广懋创新科技有限公司（暂定名）投资协议 201508100530_revised_v2.docx" "深圳市广懋创新科技有限公司signed5.pdf" "投资合作协议2014-11-27 (clean).doc" "广懋智能科技-技术服务合同-泉州瑞舍公馆.pdf" "Winshare/" "vim" "Thumbs.db" "test.c" "test" "Research_38647981.pdf" "PycharmProjects/" "Public/" "Pictures/" "OneDrive/" "Nut/" "node/" "Music/" "Movies/" "Library/" "Jts/" "img/" "Google Drive/" "GitHub/" "Dropbox/" "Downloads/" "Documents/" "Development/" "Dev's Nutstore/" "Desktop/" "data/" "bash_profiles/" "backup_bootload" "Applications (Parallels)/" "Applications/" "201508201033448035_广懋创新科技_zm.pdf" ".zshrc-e" ".zshrc" ".zsh_history" ".zsh-update" ".zcompdump-Mark’s MacBook Pro-5.0.8" ".zcompdump-Mark’s MacBook Pro-5.0.5" ".yunpan/" ".Xauthority" ".vimrc_bak" ".vimrc" ".viminfo" ".vim_bak/" ".vim/" ".Trash-1000/" ".Trash/" ".tmux.conf" ".swt/" ".subversion/" ".ssh/" ".sogouinput/" ".serverauth.9366" ".rnd" ".python27_compiled/" ".PyCharm40/" ".pubuim/" ".pip/" ".pearrc" ".oracle_jre_usage/" ".oh-my-zsh/" ".nutstore/" ".npm/" ".node-gyp/" ".mongorc.js" ".matplotlib/" ".matlab/" ".local/" ".lesshst" ".ipython/" ".ionic/" ".ideavimrc" ".hwid" ".hgignore_global" ".gstreamer-0.10/" ".gnuplot_history" ".gitignore_global" ".gitconfig" ".gem/" ".fontconfig/" ".filezilla/" ".erlang.cookie" ".emacs.d/" ".DS_Store" ".dropbox/" ".distlib/" ".dbshell" ".cups/" ".cordova/" ".config/" ".codeintel/" ".CFUserTextEncoding" ".cache/" ".buildozer/" ".baudline/" ".bashrc" ".bash_prompt" ".bash_profile" ".bash_history" ".android/" "../" "./")
+
+ ("/Users/mark/Applications/" (22360 7700 0 0) "Ubuntu Linux Applications.app/" "Ubuntu Linux 13.04 Desktop Applications.app/" "Trader_WorkStation_X.app/" "Chrome Apps.localized/" ".DS_Store" "../" "./")
+
+ ("/Users/" (22037 15048 0 0) "Shared/" "mark/" ".localized" "../" "./")
+
+ ("/Users/mark/.emacs.d/.git/" (22366 10853 0 0) "refs/" "ORIG_HEAD" "objects/" "logs/" "info/" "index" "hooks/" "HEAD" "FETCH_HEAD" "description" "config" "COMMIT_EDITMSG" ".COMMIT_EDITMSG.swp" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

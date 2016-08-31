@@ -1,0 +1,76 @@
+((("comments" .
+   [1 0 0 0 0 0 0 0])
+  ("html" .
+   [1 0 0 0])
+  ("log" .
+   [10 0 0])
+  ("browser" .
+   [2 0 0 0 0 0 0])
+  ("var" .
+   [3 0 0])
+  ("require" .
+   [0 0 0 0 0 0 1])
+  ("create" .
+   [1 0 0 0 0 0])
+  ("testindex" .
+   [1 0 0 0 0 0 0 0 0])
+  ("loadInProgress" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("false" .
+   [1 0 0 0 0])
+  ("phantom" .
+   [1 0 0 0 0 0 0])
+  ("return" .
+   [3 0 0 0 0 0])
+  ("$" .
+   [1])
+  ("if" .
+   [2 0])
+  ("injectJs" .
+   [0 0 0 1 0 0 0 0])
+  ("else" .
+   [2 0 0 0])
+  ("getElementById" .
+   [0 0 0 2 2 0 0 0 0 0 0 0 0 0])
+  ("Document" .
+   [0 0 0 0 1 0 0 0])
+  ("includeJs" .
+   [0 0 0 1 0 0 0 0 0])
+  ("function" .
+   [0 0 0 0 0 0 0 6])
+  ("user" .
+   [1 0 0 0])
+  ("username" .
+   [0 0 0 0 0 0 0 1])
+  ("password" .
+   [1 0 0 0 0 0 0 0])
+  ("querySelector" .
+   [0 0 0 1 1 0 1 0 0 1 0 0 0])
+  ("evaluate" .
+   [0 0 0 0 1 0 0 0])
+  ("onResourceReceived" .
+   [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("response" .
+   [0 0 0 0 0 1 0 0])
+  ("id" .
+   [1 0])
+  ("getElementsByTagName" .
+   [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("settings" .
+   [1 0 0 0 0 0 0 1])
+  ("headers" .
+   [1 0 0 0 0 0 0])
+  ("stringify" .
+   [1 0 0 0 0 0 0 0 0])
+  ("open" .
+   [1 0 0 0])
+  ("createdToken" .
+   [0 0 0 0 1 0 0 0 0 0 0 0])
+  ("toString" .
+   [0 0 0 0 0 1 0 0])
+  ("this" .
+   [1 0 0 0])
+  ("setq" .
+   [1 0 0 0])
+  ("nil" .
+   [1 0 0])))
