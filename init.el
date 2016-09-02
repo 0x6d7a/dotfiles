@@ -71,6 +71,11 @@
 (global-set-key (kbd "M-S-<right>") 'enlarge-window-horizontally)
 (global-set-key (kbd "M-S-<down>") 'shrink-window)
 (global-set-key (kbd "M-S-<up>") 'enlarge-window)
+(setq temporary-file-directory "~/temp/")
+(setq backup-directory-alist `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms `((".*" ,temporary-file-directory t)))
+(nyan-mode t)
+
 
 ;; ACE JUMP
 (require 'ace-jump-mode)
@@ -80,7 +85,6 @@
 
 ;; COMPANY
 (add-hook 'after-init-hook 'global-company-mode)
-(add-to-list 'company-backends 'company-c-headers)
 
 ;; ELPY
 (require 'elpy)

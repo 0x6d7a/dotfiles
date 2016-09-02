@@ -1,19 +1,19 @@
 
 ;; ----- smex-history -----
 (
- nyan-stop-animation
- nyan-start-animation
- nyan-stop-music
+ eval-buffer
  nyan-mode
  list-packages
  desktop-read
  indent-code-rigidly
+ load-theme
+ shell
 )
 
 ;; ----- smex-data -----
 (
  (smartparens-mode . 4)
- (eval-buffer . 202)
+ (eval-buffer . 204)
  (window-numbering-mode . 1)
  (split-window-below . 1)
  (split-window-right . 1)

@@ -9,6 +9,7 @@
         complete-symbol
         evil-append
         evil-backward-char
+        evil-backward-word-begin
         evil-delete-char
         evil-end-of-line
         evil-exit-visual-state
