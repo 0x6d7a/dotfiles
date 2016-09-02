@@ -2,51 +2,62 @@
 ;; --------------------------------------------------------------------------
 ;; Desktop File for Emacs
 ;; --------------------------------------------------------------------------
-;; Created Wed Aug 31 19:51:09 2016
+;; Created Fri Sep  2 09:49:13 2016
 ;; Desktop file format version 206
 ;; Emacs version 24.5.1
 
 ;; Global section:
-(setq desktop-saved-frameset [frameset 1 (22470 50349 538852 0) (desktop . "206") "Mark@Marks-MacBook-Pro.local" nil nil ((((font-backend mac-ct ns) (fontsize . 0) (font . "-*-Menlo-normal-normal-normal-*-14-*-*-*-m-0-iso10646-1") (border-width . 0) (internal-border-width . 2) (vertical-scroll-bars) (foreground-color . "#DEDEDE") (background-color . "#161A1F") (line-spacing) (left-fringe . 8) (right-fringe . 8) (menu-bar-lines . 0) (tool-bar-lines . 0) (title) (icon-type) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (alpha) (fullscreen) (horizontal-scroll-bars . t) (display-type . color) (background-mode . dark) (cursor-color . "#EEDC82") (environment) (powerline-cache) (frameset--id . "2A81-35DC-DA85-2AA2") (frameset--mini t . t) (height . 69) (width . 238) (modeline . t) (minibuffer . t) (unsplittable) (left . 0) (top . 23) (right-divider-width . 0) (bottom-divider-width . 0) (icon-name) (visibility . t) (display . "Marks-MacBook-Pro.local") (explicit-name) (tool-bar-position . top)) ((min-height . 8) (min-width . 47) (min-height-ignore . 4) (min-width-ignore . 12) (min-height-safe . 2) (min-width-safe . 6) (min-pixel-height . 128) (min-pixel-width . 376) (min-pixel-height-ignore . 64) (min-pixel-width-ignore . 96) (min-pixel-height-safe . 32) (min-pixel-width-safe . 48)) hc (pixel-width . 1920) (pixel-height . 1088) (total-width . 240) (total-height . 68) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 216) (pixel-height . 1088) (total-width . 27) (total-height . 68) (normal-height . 1.0) (normal-width . 0.11249999999999999) (buffer " *NeoTree*" (selected . t) (hscroll . 0) (fringes 8 8 nil) (margins nil) (scroll-bars 0 0 t nil) (vscroll . 0) (dedicated . t) (point . 15) (start . 1))) (hc (last . t) (pixel-width . 1704) (pixel-height . 1088) (total-width . 213) (total-height . 68) (normal-height . 1.0) (normal-width . 0.8875) (combination-limit) (leaf (pixel-width . 848) (pixel-height . 1088) (total-width . 106) (total-height . 68) (normal-height . 1.0) (normal-width . 0.5) (buffer "ofApp.cpp" (selected) (hscroll . 0) (fringes 8 8 nil) (margins 9) (scroll-bars 0 0 t nil) (vscroll . 0) (dedicated) (point . 1888) (start . 1027))) (vc (last . t) (pixel-width . 856) (pixel-height . 1088) (total-width . 107) (total-height . 68) (normal-height . 1.0) (normal-width . 0.5) (combination-limit) (leaf (pixel-width . 856) (pixel-height . 544) (total-width . 107) (total-height . 34) (normal-height . 0.5) (normal-width . 1.0) (buffer "ofApp.h" (selected) (hscroll . 0) (fringes 8 8 nil) (margins 9) (scroll-bars 0 0 t nil) (vscroll . 0) (dedicated) (point . 587) (start . 1))) (leaf (last . t) (pixel-width . 856) (pixel-height . 544) (total-width . 107) (total-height . 34) (normal-height . 0.5) (normal-width . 1.0) (buffer "main.cpp" (selected) (hscroll . 0) (fringes 8 8 nil) (margins 9) (scroll-bars 0 0 t nil) (vscroll . 0) (dedicated) (point . 340) (start . 1)))))))])
+(setq desktop-saved-frameset [frameset 1 (22472 55961 702705 0) (desktop . "206") "Mark@Marks-MacBook-Pro.local" nil nil ((((font-backend mac-ct ns) (fontsize . 0) (font . "-*-Menlo-normal-normal-normal-*-14-*-*-*-m-0-iso10646-1") (border-width . 0) (internal-border-width . 2) (vertical-scroll-bars) (foreground-color . "#DEDEDE") (background-color . "#161A1F") (line-spacing) (left-fringe . 8) (right-fringe . 8) (menu-bar-lines . 0) (tool-bar-lines . 0) (title) (icon-type) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (alpha) (fullscreen) (horizontal-scroll-bars . t) (display-type . color) (background-mode . dark) (cursor-color . "#EEDC82") (environment) (powerline-cache) (frameset--id . "2A81-35DC-DA85-2AA2") (frameset--mini t . t) (modeline . t) (minibuffer . t) (unsplittable) (right-divider-width . 0) (bottom-divider-width . 0) (icon-name) (visibility . t) (display . "Marks-MacBook-Pro.local") (explicit-name) (tool-bar-position . top) (height . 69) (width . 237) (left + -1920) (top . 360)) ((min-height . 8) (min-width . 20) (min-height-ignore . 4) (min-width-ignore . 8) (min-height-safe . 2) (min-width-safe . 4) (min-pixel-height . 128) (min-pixel-width . 160) (min-pixel-height-ignore . 64) (min-pixel-width-ignore . 64) (min-pixel-height-safe . 32) (min-pixel-width-safe . 32)) vc (pixel-width . 1912) (pixel-height . 1088) (total-width . 239) (total-height . 68) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (hc (pixel-width . 1912) (pixel-height . 768) (total-width . 239) (total-height . 48) (normal-height . 0.7058823529411766) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 896) (pixel-height . 768) (total-width . 112) (total-height . 48) (normal-height . 1.0) (normal-width . 0.4665271966527196) (buffer "ofApp.cpp" (selected . t) (hscroll . 0) (fringes 8 8 nil) (margins 9) (scroll-bars 0 0 t nil) (vscroll . 0) (dedicated) (point . 3846) (start . 2949))) (leaf (last . t) (pixel-width . 1016) (pixel-height . 768) (total-width . 127) (total-height . 48) (normal-height . 1.0) (normal-width . 0.53347280334728) (buffer "ofApp.h" (selected) (hscroll . 0) (fringes 8 8 nil) (margins 9) (scroll-bars 0 0 t nil) (vscroll . 0) (dedicated) (point . 1) (start . 1)))) (hc (last . t) (pixel-width . 1912) (pixel-height . 320) (total-width . 239) (total-height . 20) (normal-height . 0.29411764705882343) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 952) (pixel-height . 320) (total-width . 119) (total-height . 20) (normal-height . 1.0) (normal-width . 0.5) (buffer "main.cpp" (selected) (hscroll . 0) (fringes 8 8 nil) (margins 9) (scroll-bars 0 0 t nil) (vscroll . 0) (dedicated) (point . 1) (start . 1))) (leaf (last . t) (pixel-width . 960) (pixel-height . 320) (total-width . 120) (total-height . 20) (normal-height . 1.0) (normal-width . 0.5) (buffer "*Occur*" (selected) (hscroll . 0) (fringes 8 8 nil) (margins 9) (scroll-bars 0 0 t nil) (vscroll . 0) (dedicated) (point . 1) (start . 1))))))])
 (setq desktop-missing-file-warning nil)
 (setq tags-file-name nil)
 (setq tags-table-list nil)
 (setq search-ring nil)
-(setq regexp-search-ring nil)
+(setq regexp-search-ring '("o"))
 (setq register-alist nil)
-(setq file-name-history '("~/.emacs.d/" "~/Desktop/workbench/of_v0.9.3_osx_release/apps/rectangleDraw/rectangleDraw/src/ofApp.h" "~/Desktop/workbench/of_v0.9.3_osx_release/apps/rectangleDraw/rectangleDraw/src/ofApp.cpp" "~/Desktop/workbench/of_v0.9.3_osx_release/apps/rectangleDraw/rectangleDraw/src/main.cpp" "~/.emacs.d/init.el"))
+(setq file-name-history '("~/.emacs.d/" "~/Desktop/workbench/of_v0.9.3_osx_release/apps/serialExample/src/ofApp.h" "~/Desktop/workbench/of_v0.9.3_osx_release/apps/serialExample/src/main.cpp" "~/Desktop/workbench/of_v0.9.3_osx_release/apps/serialExample/src/ofApp.cpp" "~/.emacs.d/" "~/Desktop/workbench/of_v0.9.3_osx_release/apps/rectangleDraw/rectangleDraw/src/ofApp.h" "~/Desktop/workbench/of_v0.9.3_osx_release/apps/rectangleDraw/rectangleDraw/src/ofApp.cpp" "~/Desktop/workbench/of_v0.9.3_osx_release/apps/rectangleDraw/rectangleDraw/src/main.cpp" "~/.emacs.d/init.el"))
 
 ;; Buffer section -- buffers listed in same order as in buffer list:
 (desktop-create-buffer 206
-  "/Users/mark/Desktop/workbench/of_v0.9.3_osx_release/apps/rectangleDraw/rectangleDraw/src/ofApp.cpp"
+  "/Users/mark/Desktop/workbench/of_v0.9.3_osx_release/apps/serialExample/src/ofApp.cpp"
   "ofApp.cpp"
   'c++-mode
   '(abbrev-mode visual-line-mode linum-mode company-mode yas-minor-mode undo-tree-mode override-global-mode)
-  1888
-  '(1888 nil)
+  3846
+  '(2818 nil)
   nil
   nil
   '((buffer-file-coding-system . undecided-unix) (overwrite-mode) (truncate-lines)))
 
 (desktop-create-buffer 206
-  "/Users/mark/Desktop/workbench/of_v0.9.3_osx_release/apps/rectangleDraw/rectangleDraw/src/ofApp.h"
+  "/Users/mark/Desktop/workbench/of_v0.9.3_osx_release/apps/serialExample/src/main.cpp"
+  "main.cpp"
+  'c++-mode
+  '(abbrev-mode visual-line-mode linum-mode company-mode yas-minor-mode undo-tree-mode override-global-mode)
+  1
+  '(1 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (overwrite-mode) (truncate-lines)))
+
+(desktop-create-buffer 206
+  "/Users/mark/Desktop/workbench/of_v0.9.3_osx_release/apps/serialExample/src/ofApp.h"
   "ofApp.h"
   'c-mode
   '(abbrev-mode visual-line-mode linum-mode company-mode yas-minor-mode undo-tree-mode override-global-mode smartparens-mode)
-  587
+  1
   '(nil nil)
   nil
   nil
   '((buffer-file-coding-system . undecided-unix) (overwrite-mode) (truncate-lines)))
 
 (desktop-create-buffer 206
-  "/Users/mark/Desktop/workbench/of_v0.9.3_osx_release/apps/rectangleDraw/rectangleDraw/src/main.cpp"
-  "main.cpp"
-  'c++-mode
-  '(abbrev-mode visual-line-mode linum-mode company-mode yas-minor-mode undo-tree-mode override-global-mode)
-  340
-  '(340 nil)
+  "/Users/mark/.emacs.d/init.el"
+  "init.el"
+  'emacs-lisp-mode
+  '(visual-line-mode linum-mode company-mode yas-minor-mode undo-tree-mode override-global-mode smartparens-mode)
+  7331
+  '(7331 nil)
   nil
   nil
-  '((buffer-file-coding-system . undecided-unix) (overwrite-mode) (truncate-lines)))
+  '((buffer-file-coding-system . prefer-utf-8-unix) (overwrite-mode) (truncate-lines . t)))
 

@@ -4,11 +4,13 @@
 (setq mc/cmds-to-run-for-all
       '(
         ace-jump-word-mode
+        c-electric-semi&comma
         comment-region
         complete-symbol
         evil-append
         evil-backward-char
         evil-delete-char
+        evil-end-of-line
         evil-exit-visual-state
         evil-force-normal-state
         evil-forward-word-end

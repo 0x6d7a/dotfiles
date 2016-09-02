@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
- indent-code-rigidly
+ nyan-stop-animation
+ nyan-start-animation
+ nyan-stop-music
+ nyan-mode
+ list-packages
  desktop-read
- desktop-save
- eval-buffer
- company-mode
- linum-relative-toggle
- enlarge-window
+ indent-code-rigidly
 )
 
 ;; ----- smex-data -----
@@ -17,7 +17,7 @@
  (window-numbering-mode . 1)
  (split-window-below . 1)
  (split-window-right . 1)
- (list-packages . 40)
+ (list-packages . 41)
  (top-level . 2)
  (helm-M-x . 2)
  (helm-buffers-list . 1)
@@ -91,6 +91,10 @@
  (shrink-window . 6)
  (enlarge-window . 1)
  (desktop-save . 3)
- (desktop-read . 1)
+ (desktop-read . 2)
  (indent-code-rigidly . 2)
+ (nyan-mode . 1)
+ (nyan-start-animation . 2)
+ (nyan-stop-music . 1)
+ (nyan-stop-animation . 2)
 )

@@ -67,6 +67,12 @@
 (global-visual-line-mode 1)
 (toggle-truncate-lines 1)
 (setq c-default-style "ellemtel" c-basic-offset 4)
+(global-set-key (kbd "M-S-<left>") 'shrink-window-horizontally)
+(global-set-key (kbd "M-S-<right>") 'enlarge-window-horizontally)
+(global-set-key (kbd "M-S-<down>") 'shrink-window)
+(global-set-key (kbd "M-S-<up>") 'enlarge-window)
+
+
 
 ;; ACE JUMP
 (require 'ace-jump-mode)
@@ -76,6 +82,8 @@
 
 ;; COMPANY
 (add-hook 'after-init-hook 'global-company-mode)
+(add-to-list 'company-backends 'company-c-headers)
+
 
 ;; ELPY
 (require 'elpy)
@@ -128,7 +136,7 @@
 
 (global-set-key (kbd "C-x b") 'helm-buffers-list)
 (global-set-key (kbd "C-x r b") 'helm-bookmarks)
-(global-set-key (kbd "C-x m") 'helm-M-x)
+(global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 
@@ -247,7 +255,7 @@
   (indent-according-to-mode))
 
 ;; SMEX
-(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "C-x m") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command) ;; This is the old M-x
 
