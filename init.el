@@ -28,6 +28,7 @@
     sublime-themes
     multiple-cursors
     expand-region
+    helm-company
     helm-swoop
     ace-jump-mode
     expand-region
@@ -66,7 +67,7 @@
       mac-option-modifier 'none)
 (global-visual-line-mode 1)
 (toggle-truncate-lines 1)
-(setq c-default-style "ellemtel" c-basic-offset 4)
+(setq c-default-style "k&r" c-basic-offset 4)
 (global-set-key (kbd "M-S-<left>") 'shrink-window-horizontally)
 (global-set-key (kbd "M-S-<right>") 'enlarge-window-horizontally)
 (global-set-key (kbd "M-S-<down>") 'shrink-window)
@@ -75,6 +76,10 @@
 (setq backup-directory-alist `((".*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms `((".*" ,temporary-file-directory t)))
 (nyan-mode t)
+(setq gdb-many-windows t
+      gdb-show-main t)
+
+(global-set-key (kbd "M-`") 'other-frame)
 
 
 ;; ACE JUMP
@@ -82,6 +87,10 @@
 (define-key global-map (kbd "C-c u") 'ace-jump-word-mode)
 (define-key global-map (kbd "C-c C-u") 'ace-jump-char-mode)
 (define-key global-map (kbd "C-c C-c C-u") 'ace-jump-line-mode)
+
+;; CLEAN-AINDENT
+(require 'clean-aindent-mode)
+(clean-aindent-mode 1)
 
 ;; COMPANY
 (add-hook 'after-init-hook 'global-company-mode)
@@ -124,8 +133,13 @@
 (global-set-key (kbd "M-u") 'toggle-evil-mode)
 (evil-mode t)
 
+;; FUNCTION ARGS
+(require 'function-args)
+(fa-config-default)
+
 ;; HELM
 (require 'helm)
+(require 'helm-company)
 (require 'helm-config)
 (require 'helm-swoop)
 (global-set-key (kbd "M-i") 'helm-swoop)
@@ -140,6 +154,12 @@
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
+
+(eval-after-load 'company
+  '(progn
+     (define-key company-mode-map (kbd "C-;") 'helm-company)
+     (define-key company-active-map (kbd "C-;") 'helm-company)))
+
 
 ;; LINENUM RELATIVE
 (require 'linum-relative)
@@ -204,6 +224,13 @@
 (require 'org-bullets)
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 
+
+;; CC-MODE
+(require 'cc-mode)
+(define-key c-mode-map [(tab)] 'company-complete)
+(define-key c++-mode-map [(tab)] 'company-complete)
+
+
 ;; MARKDOWN MODE
 (autoload 'markdown-mode "markdown-mode"
   "Major mode for editing Markdown files" t)
@@ -248,12 +275,19 @@
 (add-hook 'markdown-mode-hook #'smartparens-mode)
 (add-hook 'emacs-lisp-mode-hook #'smartparens-mode)
 (sp-local-pair 'js2-mode "{" nil :post-handlers '((my-create-newline-and-enter-sexp "RET")))
+(sp-with-modes '(c-mode c++-mode)
+  (sp-local-pair "{" nil :post-handlers '(("||\n[i]" "RET")))
+  (sp-local-pair "/*" "*/" :post-handlers '((" | " "SPC")
+                                            ("* ||\n[i]" "RET"))))
 
 (defun my-create-newline-and-enter-sexp (&rest_ignored)
   (newline)
   (indent-according-to-mode)
   (forward-line -1)
   (indent-according-to-mode))
+
+
+
 
 ;; SMEX
 (global-set-key (kbd "C-x m") 'smex)
@@ -279,7 +313,14 @@
 ;; WINDOW NUMBERING
 (window-numbering-mode 1)
 
+;; WINNER
+(winner-mode 1)
+
 ;; YASNIPPET
+(setq yas-snippet-dirs
+      '("~/.emacs.d/snippets"
+        "~/.emacs.d/elpa"
+        ))
 (require 'yasnippet)
 (yas-global-mode 1)
 (add-hook 'term-mode-hook (lambda()
