@@ -1,0 +1,26 @@
+;; Object serialDraw/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "serialDraw/"
+  :tables
+  (list
+    (semanticdb-table "Makefile"
+      :major-mode 'makefile-bsdmake-mode
+      :tags 
+        '( ("$(OF_ROOT)/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk" include nil nil [303 392]))          
+      :file "Makefile"
+      :pointmax 392
+      :fsize 391
+      :lastmodtime '(22474 4165 0 0)
+      :unmatched-syntax '((semantic-list 250 . 266) (punctuation 249 . 250) (punctuation 248 . 249) (symbol 241 . 248) (bol 237 . 237) (shell-command 147 . 166) (bol 146 . 146)))
+    (semanticdb-table "config.make"
+      :major-mode 'makefile-bsdmake-mode
+      :tags 
+        '( ("PROJECT_CFLAGS" variable (:default-value ("-g")) nil [5010 5030]))          
+      :file "config.make"
+      :pointmax 6540
+      :fsize 6539
+      :lastmodtime '(22475 51247 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!mark!Desktop!workbench!of_v0.9.3_osx_release!apps!serialDraw!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

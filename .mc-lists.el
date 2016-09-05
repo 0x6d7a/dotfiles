@@ -5,6 +5,7 @@
       '(
         ace-jump-word-mode
         c-electric-semi&comma
+        c-electric-slash
         comment-region
         complete-symbol
         evil-append

@@ -1,0 +1,85 @@
+;; Object MacUARTCommunication/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "MacUARTCommunication/"
+  :tables
+  (list
+    (semanticdb-table "test.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("string.h" include (:system-flag t) nil [20 39])
+            ("unistd.h" include (:system-flag t) nil [40 59])
+            ("fcntl.h" include (:system-flag t) nil [60 78])
+            ("sys/ioctl.h" include (:system-flag t) nil [79 101])
+            ("errno.h" include (:system-flag t) nil [102 120])
+            ("termios.h" include (:system-flag t) nil [143 163])
+            ("CoreFoundation/CoreFoundation.h" include (:system-flag t) nil [289 331])
+            ("IOKit/IOKitLib.h" include (:system-flag t) nil [332 359])
+            ("IOKit/IOBSD.h" include (:system-flag t) nil [360 384])
+            ("LOCAL_ECHO" variable (:constant-flag t) nil [394 404])
+            ("kOKResponseString" variable (:constant-flag t) nil [433 450])
+            ("kOKResponseString" variable (:constant-flag t) nil [433 450])
+            ("kOKResponseString" variable (:constant-flag t) nil [433 450])
+            ("kOKResponseString" variable (:constant-flag t) nil [482 499])
+            ("kATCommandString" variable (:constant-flag t) nil [529 545])
+            ("kATCommandString" variable (:constant-flag t) nil [529 545])
+            ("kATCommandString" variable (:constant-flag t) nil [529 545])
+            ("kMyErrReturn" variable (:constant-flag t) nil [561 573])
+            ("" type
+               (:members 
+                  ( ("kNumRetries" variable
+                       (:constant-flag t
+                        :default-value (579 580)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [589 604]))                  
+                :type "enum")
+                nil [578 607])
+            ("gOriginalTTYAttrs" variable
+               (:typemodifiers ("static")
+                :type ("termios" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [609 649])
+            ("OpenSerialPort" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("devicePath" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [677 700]))                  
+                :type "int")
+                nil [651 1612])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1624 1629]))                  
+                :type "int")
+                nil [1615 1776]))          
+      :file "test.cpp"
+      :pointmax 1777
+      :fsize 1776
+      :lastmodtime '(22475 50714 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("kATCommandString" . ((string "\"AT\\r\"" 528 . 534)))
+          ("kOKResponseString" . ((string "\"AT\\r\\r\\nOK\\r\\n\"" 433 . 449)))
+          )
+)
+    (semanticdb-table "Makefile"
+      :major-mode 'makefile-bsdmake-mode
+      :tags 
+        '( ("CC" variable (:default-value ("gcc")) nil [1 8])
+            ("CFLAGS" variable (:default-value ("-g")) nil [8 19])
+            ("PROGRAM_NAME" variable (:default-value ("test")) nil [19 37])
+            ("$(PROGRAM_NAME)" function (:arguments ("*.cpp")) nil [38 87])
+            ("run" function nil nil [88 112])
+            ("clean" function nil nil [113 140]))          
+      :file "Makefile"
+      :pointmax 140
+      :fsize 139
+      :lastmodtime '(22475 49585 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!mark!Desktop!workbench!MacUARTCommunication!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

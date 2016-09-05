@@ -1,0 +1,739 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables
+  (list
+    (semanticdb-table "handySerial.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("handySerial.h" include nil nil [1 25])
+            ("handySerial_UARTInit" function
+               (:arguments 
+                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [53 60])
+                    ("speed" variable (:type "int") (reparse-symbol arg-sub-list) [61 71])
+                    ("parity" variable (:type "int") (reparse-symbol arg-sub-list) [72 83]))                  
+                :type "int")
+                nil [27 1334])
+            ("handySerial_setblocking" function
+               (:arguments 
+                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [1388 1395])
+                    ("should_block" variable (:type "int") (reparse-symbol arg-sub-list) [1396 1413]))                  
+                :type "void")
+                nil [1358 1797])
+            ("handySerial_UARTOpen" function
+               (:arguments 
+                  ( ("portname" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1845 1860]))                  
+                :type "int")
+                nil [1820 2162]))          
+      :file "handySerial.cpp"
+      :pointmax 2163
+      :fsize 2227
+      :lastmodtime '(22475 52496 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "handySerial.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("errno.h" include (:system-flag t) nil [15 33])
+            ("termios.h" include (:system-flag t) nil [34 54])
+            ("unistd.h" include (:system-flag t) nil [55 74])
+            ("stdio.h" include (:system-flag t) nil [75 93])
+            ("stdlib.h" include (:system-flag t) nil [94 113])
+            ("fcntl.h" include (:system-flag t) nil [114 132])
+            ("string.h" include (:system-flag t) nil [133 152])
+            ("CoreFoundation/CoreFoundation.h" include (:system-flag t) nil [171 213])
+            ("IOKit/IOKitLib.h" include (:system-flag t) nil [214 241])
+            ("IOKit/IOBSD.h" include (:system-flag t) nil [242 266])
+            ("__HANDYSERIAL_H__" variable (:constant-flag t) nil [310 327])
+            ("BACKHOME" variable (:constant-flag t) nil [344 352])
+            ("LLIGHTON" variable (:constant-flag t) nil [368 376])
+            ("LLIGHTOFF" variable (:constant-flag t) nil [392 401])
+            ("LAIRON" variable (:constant-flag t) nil [417 423])
+            ("LAIROFF" variable (:constant-flag t) nil [439 446])
+            ("LAIRHIGH" variable (:constant-flag t) nil [462 470])
+            ("LAIRLOW" variable (:constant-flag t) nil [486 493])
+            ("LTVON" variable (:constant-flag t) nil [509 514])
+            ("LTVOFF" variable (:constant-flag t) nil [530 536])
+            ("STARTWORK" variable (:constant-flag t) nil [552 561])
+            ("STOPWORK" variable (:constant-flag t) nil [577 585])
+            ("RLIGHTON" variable (:constant-flag t) nil [601 609])
+            ("RLIGHTOFF" variable (:constant-flag t) nil [625 634])
+            ("RFANON" variable (:constant-flag t) nil [650 656])
+            ("RFANOFF" variable (:constant-flag t) nil [672 679])
+            ("RFANLIGHTON" variable (:constant-flag t) nil [695 706])
+            ("RFANLIGHTOFF" variable (:constant-flag t) nil [722 734])
+            ("RFANSWINGSTART" variable (:constant-flag t) nil [750 764])
+            ("RFANSWINGSTOP" variable (:constant-flag t) nil [780 793])
+            ("GOSLEEP" variable (:constant-flag t) nil [809 816])
+            ("GETUP" variable (:constant-flag t) nil [832 837])
+            ("SREADING" variable (:constant-flag t) nil [853 861])
+            ("SGOODNIGHT" variable (:constant-flag t) nil [877 887])
+            ("GOOUT" variable (:constant-flag t) nil [903 908])
+            ("handySerial_UARTInit" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [950 957])
+                    ("speed" variable (:type "int") (reparse-symbol arg-sub-list) [958 968])
+                    ("parity" variable (:type "int") (reparse-symbol arg-sub-list) [969 980]))                  
+                :type "int")
+                nil [917 981])
+            ("handySerial_setblocking" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [1019 1026])
+                    ("should_block" variable (:type "int") (reparse-symbol arg-sub-list) [1027 1044]))                  
+                :type "void")
+                nil [982 1045])
+            ("handySerial_UARTOpen" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1078 1089]))                  
+                :type "int")
+                nil [1046 1090]))          
+      :file "handySerial.h"
+      :pointmax 1091
+      :fsize 1090
+      :lastmodtime '(22475 50775 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("LAIRHIGH" . ((string "\"!22#\"" 349 . 355)))
+          ("RFANOFF" . ((string "\"@20#\"" 558 . 564)))
+          ("RFANLIGHTON" . ((string "\"@22#\"" 585 . 591)))
+          ("GOSLEEP" . ((string "\"300#\"" 695 . 701)))
+          ("STARTWORK" . ((string "\"299#\"" 440 . 446)))
+          ("RFANON" . ((string "\"@21#\"" 535 . 541)))
+          ("BACKHOME" . ((string "\"199#\"" 231 . 237)))
+          ("LLIGHTON" . ((string "\"!11#\"" 255 . 261)))
+          ("LLIGHTOFF" . ((string "\"!10#\"" 280 . 286)))
+          ("LAIRON" . ((string "\"!21#\"" 302 . 308)))
+          ("LAIROFF" . ((string "\"!20#\"" 325 . 331)))
+          ("RFANSWINGSTOP" . ((string "\"@25#\"" 672 . 678)))
+          ("GOOUT" . ((string "\"400#\"" 787 . 793)))
+          ("RLIGHTOFF" . ((string "\"@10#\"" 513 . 519)))
+          ("SREADING" . ((string "\"&31#\"" 740 . 746)))
+          ("LAIRLOW" . ((string "\"!23#\"" 372 . 378)))
+          ("RFANLIGHTOFF" . ((string "\"@23#\"" 613 . 619)))
+          ("RLIGHTON" . ((string "\"@11#\"" 488 . 494)))
+          ("GETUP" . ((string "\"399#\"" 716 . 722)))
+          ("__HANDYSERIAL_H__")
+          ("LTVON" . ((string "\"!31#\"" 393 . 399)))
+          ("SGOODNIGHT" . ((string "\"&30#\"" 766 . 772)))
+          ("LTVOFF" . ((string "\"!30#\"" 415 . 421)))
+          ("STOPWORK" . ((string "\"200#\"" 464 . 470)))
+          ("RFANSWINGSTART" . ((string "\"@24#\"" 643 . 649)))
+          )
+)
+    (semanticdb-table "ofApp.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ofApp.h" include nil nil [1 19])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [21 41])
+            ("setup" function
+               (:parent "ofApp"
+                :type "void")
+                nil [108 1035])
+            ("update" function
+               (:parent "ofApp"
+                :type "void")
+                nil [1102 1793])
+            ("draw" function
+               (:parent "ofApp"
+                :type "void")
+                nil [1860 2396])
+            ("keyPressed" function
+               (:parent "ofApp"
+                :arguments 
+                  ( ("key" variable (:type "int") (reparse-symbol arg-sub-list) [2488 2496]))                  
+                :type "void")
+                nil [2463 2500])
+            ("keyReleased" function
+               (:parent "ofApp"
+                :arguments 
+                  ( ("key" variable (:type "int") (reparse-symbol arg-sub-list) [2591 2599]))                  
+                :type "void")
+                nil [2567 2603])
+            ("mouseMoved" function
+               (:parent "ofApp"
+                :arguments 
+                  ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [2693 2699])
+                    ("y" variable (:type "int") (reparse-symbol arg-sub-list) [2700 2706]))                  
+                :type "void")
+                nil [2670 2710])
+            ("mouseDragged" function
+               (:parent "ofApp"
+                :arguments 
+                  ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [2802 2808])
+                    ("y" variable (:type "int") (reparse-symbol arg-sub-list) [2809 2815])
+                    ("button" variable (:type "int") (reparse-symbol arg-sub-list) [2816 2827]))                  
+                :type "void")
+                nil [2777 2831])
+            ("mousePressed" function
+               (:parent "ofApp"
+                :arguments 
+                  ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [2923 2929])
+                    ("y" variable (:type "int") (reparse-symbol arg-sub-list) [2930 2936])
+                    ("button" variable (:type "int") (reparse-symbol arg-sub-list) [2937 2948]))                  
+                :type "void")
+                nil [2898 2952])
+            ("mouseReleased" function
+               (:parent "ofApp"
+                :arguments 
+                  ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [3045 3051])
+                    ("y" variable (:type "int") (reparse-symbol arg-sub-list) [3052 3058])
+                    ("button" variable (:type "int") (reparse-symbol arg-sub-list) [3059 3070]))                  
+                :type "void")
+                nil [3019 3074])
+            ("mouseEntered" function
+               (:parent "ofApp"
+                :arguments 
+                  ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [3166 3172])
+                    ("y" variable (:type "int") (reparse-symbol arg-sub-list) [3173 3179]))                  
+                :type "void")
+                nil [3141 3183])
+            ("mouseExited" function
+               (:parent "ofApp"
+                :arguments 
+                  ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [3274 3280])
+                    ("y" variable (:type "int") (reparse-symbol arg-sub-list) [3281 3287]))                  
+                :type "void")
+                nil [3250 3291])
+            ("windowResized" function
+               (:parent "ofApp"
+                :arguments 
+                  ( ("w" variable (:type "int") (reparse-symbol arg-sub-list) [3384 3390])
+                    ("h" variable (:type "int") (reparse-symbol arg-sub-list) [3391 3397]))                  
+                :type "void")
+                nil [3358 3401])
+            ("gotMessage" function
+               (:parent "ofApp"
+                :arguments 
+                  ( ("msg" variable (:type ("ofMessage" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3491 3505]))                  
+                :type "void")
+                nil [3468 3509])
+            ("dragEvent" function
+               (:parent "ofApp"
+                :arguments 
+                  ( ("dragInfo" variable (:type ("ofDragInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3598 3618]))                  
+                :type "void")
+                nil [3576 3622]))          
+      :file "ofApp.cpp"
+      :pointmax 3623
+      :fsize 3622
+      :lastmodtime '(22476 9984 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "ofApp.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("ofMain.h" include nil nil [15 34])
+            ("handyGraphview.h" include nil nil [35 62])
+            ("handySerial.h" include nil nil [63 87])
+            ("handyUtil.h" include nil nil [88 110])
+            ("FIRST_READ" variable (:constant-flag t) nil [121 131])
+            ("CHUNK" variable (:constant-flag t) nil [142 147])
+            ("CHANNEL" variable (:constant-flag t) nil [160 167])
+            ("SIZEOFSHORT" variable (:constant-flag t) nil [178 189])
+            ("SEND_DATASIZE" variable (:constant-flag t) nil [200 213])
+            ("READ_DATASIZE" variable (:constant-flag t) nil [252 265])
+            ("DEBUG" variable (:constant-flag t) nil [290 295])
+            ("ofApp" type
+               (:superclasses 
+                  ( ("ofBaseApp" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [332 339])
+                    ("setup" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [344 357])
+                    ("update" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [362 376])
+                    ("draw" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [381 393])
+                    ("keyPressed" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("key" variable (:type "int") (reparse-symbol arg-sub-list) [417 425]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [399 426])
+                    ("keyReleased" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("key" variable (:type "int") (reparse-symbol arg-sub-list) [448 456]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [431 457])
+                    ("mouseMoved" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [478 484])
+                            ("y" variable (:type "int") (reparse-symbol arg-sub-list) [485 492]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [462 493])
+                    ("mouseDragged" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [516 522])
+                            ("y" variable (:type "int") (reparse-symbol arg-sub-list) [523 529])
+                            ("button" variable (:type "int") (reparse-symbol arg-sub-list) [530 541]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [498 542])
+                    ("mousePressed" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [565 571])
+                            ("y" variable (:type "int") (reparse-symbol arg-sub-list) [572 578])
+                            ("button" variable (:type "int") (reparse-symbol arg-sub-list) [579 590]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [547 591])
+                    ("mouseReleased" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [615 621])
+                            ("y" variable (:type "int") (reparse-symbol arg-sub-list) [622 628])
+                            ("button" variable (:type "int") (reparse-symbol arg-sub-list) [629 640]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [596 641])
+                    ("mouseEntered" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [664 670])
+                            ("y" variable (:type "int") (reparse-symbol arg-sub-list) [671 677]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [646 678])
+                    ("mouseExited" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [700 706])
+                            ("y" variable (:type "int") (reparse-symbol arg-sub-list) [707 713]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [683 714])
+                    ("windowResized" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("w" variable (:type "int") (reparse-symbol arg-sub-list) [738 744])
+                            ("h" variable (:type "int") (reparse-symbol arg-sub-list) [745 751]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [719 752])
+                    ("dragEvent" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("dragInfo" variable (:type ("ofDragInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [772 792]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [757 793])
+                    ("gotMessage" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("msg" variable (:type ("ofMessage" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [814 828]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [798 829])
+                    ("font" variable (:type ("ofTrueTypeFont" type (:type "class") nil nil)) (reparse-symbol classsubparts) [835 856])
+                    ("private" label nil (reparse-symbol classsubparts) [858 866])
+                    ("fd" variable (:type "int") (reparse-symbol classsubparts) [880 887])
+                    ("gotData" variable (:type "int") (reparse-symbol classsubparts) [892 904])
+                    ("smoothingFactor" variable (:type "float") (reparse-symbol classsubparts) [909 931])
+                    ("bufCurrent" variable
+                       (:dereference 1
+                        :type "float")
+                        (reparse-symbol classsubparts) [936 968])
+                    ("bufPrevious" variable
+                       (:dereference 1
+                        :type "float")
+                        (reparse-symbol classsubparts) [973 1006])
+                    ("envelope" variable
+                       (:dereference 2
+                        :type "float")
+                        (reparse-symbol classsubparts) [1011 1042])
+                    ("outputBuffer" variable
+                       (:dereference 2
+                        :type "float")
+                        (reparse-symbol classsubparts) [1047 1082])
+                    ("isfirstframe" variable (:type "bool") (reparse-symbol classsubparts) [1087 1105])
+                    ("calAbs" variable (:type "bool") (reparse-symbol classsubparts) [1110 1122])
+                    ("canvas" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("ofRectangle" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1127 1154])
+                    ("lines" variable
+                       (:dereference 1
+                        :type ("ofPolyline" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1159 1185]))                  
+                :type "class")
+                nil [299 1188]))          
+      :file "ofApp.h"
+      :pointmax 1189
+      :fsize 1188
+      :lastmodtime '(22476 7569 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("SEND_DATASIZE" . 
+              ((symbol "CHUNK" 214 . 219) (punctuation "*" 220 . 221) (symbol "CHANNEL" 222 . 229) (punctuation "*" 230 . 231) (symbol "SIZEOFSHORT" 232 . 243)))
+          ("SIZEOFSHORT" . ((number "2" 190 . 191)))
+          ("FIRST_READ" . ((number "1" 132 . 133)))
+          ("CHUNK" . ((number "678" 148 . 151)))
+          ("CHANNEL" . ((number "3" 168 . 169)))
+          ("DEBUG" . ((number "1" 296 . 297)))
+          ("READ_DATASIZE" . 
+              ((symbol "CHUNK" 266 . 271) (punctuation "*" 272 . 273) (symbol "CHANNEL" 274 . 281)))
+          )
+)
+    (semanticdb-table "handyGraphview.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("handyGraphview.h" include nil nil [1 28])
+            ("handyGraphview_subplot" function
+               (:arguments 
+                  ( ("rows" variable (:type "int") (reparse-symbol arg-sub-list) [74 83])
+                    ("cols" variable (:type "int") (reparse-symbol arg-sub-list) [84 93]))                  
+                :type ("vector" type
+                     (:template-specifier 
+                        ( ("ofRectangle" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [31 721])
+            ("handyGraphview_drawData" function
+               (:arguments 
+                  ( ("data" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [752 764])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [765 774])
+                    ("line" variable (:type ("ofPolyline" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [775 791])
+                    ("area" variable (:type ("ofRectangle" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [792 809])
+                    ("ylim" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [810 822]))                  
+                :type "void")
+                nil [723 1154]))          
+      :file "handyGraphview.cpp"
+      :pointmax 1156
+      :fsize 1155
+      :lastmodtime '(22476 8453 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "handyGraphview.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("ofMain.h" include nil nil [15 34])
+            ("ofRectangle.h" include nil nil [35 59])
+            ("__HANDYGRAPHVIEW_H__" variable (:constant-flag t) nil [98 118])
+            ("handyGraphview_subplot" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("rows" variable (:type "int") (reparse-symbol arg-sub-list) [177 186])
+                    ("cols" variable (:type "int") (reparse-symbol arg-sub-list) [187 196]))                  
+                :type ("vector" type
+                     (:template-specifier 
+                        ( ("ofRectangle" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [127 197])
+            ("handyGraphview_drawData" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("data" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [234 246])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [247 256])
+                    ("line" variable (:type ("ofPolyline" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [257 273])
+                    ("area" variable (:type ("ofRectangle" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [274 291])
+                    ("ylim" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [292 304]))                  
+                :type "void")
+                nil [198 305]))          
+      :file "handyGraphview.h"
+      :pointmax 306
+      :fsize 305
+      :lastmodtime '(22476 6330 0 0)
+      :unmatched-syntax '((symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2) (symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2))
+      :lexical-table 
+        '(("__HANDYGRAPHVIEW_H__")
+          )
+)
+    (semanticdb-table "main.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ofMain.h" include nil nil [1 20])
+            ("ofApp.h" include nil nil [21 39])
+            ("main" function (:type "int") nil [116 343]))          
+      :file "main.cpp"
+      :pointmax 344
+      :fsize 343
+      :lastmodtime '(22475 60557 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "handyUtil.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("math.h" include (:system-flag t) nil [15 32])
+            ("handyGraphview.h" include nil nil [33 60])
+            ("__HANDYUTIL_H__" variable (:constant-flag t) nil [94 109])
+            ("handyUtil_genEnvelope" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("raw_data" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [153 169])
+                    ("envelope" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [170 186])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [187 196]))                  
+                :type "void")
+                nil [119 197])
+            ("handyUtil_compTrigger" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("read" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [232 243])
+                    ("tri" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [244 254])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [255 264])
+                    ("esp" variable (:type "double") (reparse-symbol arg-sub-list) [265 276]))                  
+                :type "bool")
+                nil [198 277])
+            ("handyUtil_smoothing" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("smoothing" variable (:type "float") (reparse-symbol arg-sub-list) [310 326])
+                    ("bufPrevious" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [327 346])
+                    ("bufCurrent" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [347 365])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [366 375]))                  
+                :type "void")
+                nil [278 376])
+            ("handyUtil_reduceBias" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [410 424])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [425 434])
+                    ("calAbs" variable (:type "bool") (reparse-symbol arg-sub-list) [435 447]))                  
+                :type "void")
+                nil [377 448])
+            ("handyUtil_readRaw" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [478 485])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [486 495])
+                    ("bufPrevious" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [496 515])
+                    ("bufCurrent" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [516 534])
+                    ("firstFrame" variable (:type "bool") (reparse-symbol arg-sub-list) [535 551]))                  
+                :type "int")
+                nil [449 552])
+            ("handyUtil_linspace" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("dst" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [584 595])
+                    ("start" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [596 615])
+                    ("end" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [616 629])
+                    ("num" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [630 643]))                  
+                :type "void")
+                nil [553 644])
+            ("handyUtil_gaussian1d" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("g" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [678 687])
+                    ("size" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [688 703])
+                    ("" variable (:type ("n" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [702 704])
+                    ("sigma" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [705 724]))                  
+                :type "void")
+                nil [645 725])
+            ("handyUtil_conv" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("signal" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [753 767])
+                    ("signal_size" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [768 793])
+                    ("filter" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [794 808])
+                    ("filter_size" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [809 834])
+                    ("result" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [835 849]))                  
+                :type "void")
+                nil [726 850]))          
+      :file "handyUtil.h"
+      :pointmax 851
+      :fsize 850
+      :lastmodtime '(22477 21128 0 0)
+      :unmatched-syntax '((symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2) (symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2))
+      :lexical-table 
+        '(("__HANDYUTIL_H__")
+          )
+)
+    (semanticdb-table "handyUtil.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("handySerial.h" include nil nil [1 25])
+            ("handyUtil.h" include nil nil [26 48])
+            ("handyUtil_genEnvelope" function
+               (:arguments 
+                  ( ("raw_data" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [77 93])
+                    ("envelope" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [94 110])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [111 120]))                  
+                :type "void")
+                nil [50 475])
+            ("handyUtil_compTrigger" function
+               (:arguments 
+                  ( ("read" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [504 515])
+                    ("tri" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [516 526])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [527 536])
+                    ("esp" variable (:type "double") (reparse-symbol arg-sub-list) [537 548]))                  
+                :type "bool")
+                nil [477 691])
+            ("handyUtil_smoothing" function
+               (:arguments 
+                  ( ("smoothing" variable (:type "float") (reparse-symbol arg-sub-list) [718 734])
+                    ("bufPrevious" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [735 754])
+                    ("bufCurrent" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [755 773])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [774 783]))                  
+                :type "void")
+                nil [693 954])
+            ("handyUtil_reduceBias" function
+               (:arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [982 996])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [997 1006])
+                    ("calAbs" variable (:type "bool") (reparse-symbol arg-sub-list) [1007 1019]))                  
+                :type "void")
+                nil [956 1313])
+            ("handyUtil_readRaw" function
+               (:arguments 
+                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [1337 1344])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [1345 1354])
+                    ("bufPrevious" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [1355 1374])
+                    ("bufCurrent" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [1375 1393])
+                    ("firstFrame" variable (:type "bool") (reparse-symbol arg-sub-list) [1394 1410]))                  
+                :type "int")
+                nil [1315 2327])
+            ("handyUtil_linspace" function
+               (:arguments 
+                  ( ("dst" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [2353 2364])
+                    ("start" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2365 2384])
+                    ("end" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2385 2398])
+                    ("num" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2399 2412]))                  
+                :type "void")
+                nil [2329 2571])
+            ("handyUtil_gaussian1d" function
+               (:arguments 
+                  ( ("g" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [2599 2608])
+                    ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2609 2624])
+                    ("sigma" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2625 2644]))                  
+                :type "void")
+                nil [2573 2779])
+            ("handyUtil_conv" function
+               (:arguments 
+                  ( ("signal" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [2801 2815])
+                    ("signal_size" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2816 2841])
+                    ("filter" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [2842 2856])
+                    ("filter_size" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2857 2882])
+                    ("result" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [2883 2897]))                  
+                :type "void")
+                nil [2781 3253]))          
+      :file "handyUtil.cpp"
+      :pointmax 3254
+      :fsize 3253
+      :lastmodtime '(22477 21141 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!mark!Desktop!workbench!of_v0.9.3_osx_release!apps!serialDraw!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

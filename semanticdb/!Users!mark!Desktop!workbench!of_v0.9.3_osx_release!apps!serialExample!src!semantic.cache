@@ -1,0 +1,354 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables
+  (list
+    (semanticdb-table "ofApp.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ofApp.h" include nil nil [1 19])
+            ("cserial.h" include nil nil [20 40])
+            ("math.h" include (:system-flag t) nil [41 58])
+            ("UARTInit" function
+               (:arguments 
+                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [97 104])
+                    ("speed" variable (:type "int") (reparse-symbol arg-sub-list) [105 115])
+                    ("parity" variable (:type "int") (reparse-symbol arg-sub-list) [116 127]))                  
+                :type "int")
+                nil [83 1434])
+            ("set_blocking" function
+               (:arguments 
+                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [1477 1484])
+                    ("should_block" variable (:type "int") (reparse-symbol arg-sub-list) [1485 1502]))                  
+                :type "void")
+                nil [1458 1886])
+            ("UARTOpen" function
+               (:arguments 
+                  ( ("portname" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1922 1937]))                  
+                :type "int")
+                nil [1909 2168])
+            ("genEnvelope" function
+               (:arguments 
+                  ( ("raw_data" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [2187 2203])
+                    ("y" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [2204 2213])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [2214 2223]))                  
+                :type "void")
+                nil [2170 2536])
+            ("linspace" function
+               (:arguments 
+                  ( ("dst" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [2552 2563])
+                    ("start" variable (:type "int") (reparse-symbol arg-sub-list) [2564 2574])
+                    ("end" variable (:type "int") (reparse-symbol arg-sub-list) [2575 2583])
+                    ("num" variable (:type "int") (reparse-symbol arg-sub-list) [2584 2592]))                  
+                :type "void")
+                nil [2538 2735])
+            ("conv" function
+               (:arguments 
+                  ( ("signal" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [2748 2762])
+                    ("signal_size" variable (:type "int") (reparse-symbol arg-sub-list) [2763 2779])
+                    ("filter" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [2780 2794])
+                    ("filter_size" variable (:type "int") (reparse-symbol arg-sub-list) [2795 2811])
+                    ("result" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [2812 2826]))                  
+                :type "void")
+                nil [2738 3143])
+            ("setup" function
+               (:parent "ofApp"
+                :type "void")
+                nil [3211 4168])
+            ("update" function
+               (:parent "ofApp"
+                :type "void")
+                nil [4235 5211])
+            ("draw" function
+               (:parent "ofApp"
+                :type "void")
+                nil [5278 5660])
+            ("keyPressed" function
+               (:parent "ofApp"
+                :arguments 
+                  ( ("key" variable (:type "int") (reparse-symbol arg-sub-list) [5752 5760]))                  
+                :type "void")
+                nil [5727 5764])
+            ("keyReleased" function
+               (:parent "ofApp"
+                :arguments 
+                  ( ("key" variable (:type "int") (reparse-symbol arg-sub-list) [5855 5863]))                  
+                :type "void")
+                nil [5831 5867])
+            ("mouseMoved" function
+               (:parent "ofApp"
+                :arguments 
+                  ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [5957 5963])
+                    ("y" variable (:type "int") (reparse-symbol arg-sub-list) [5964 5970]))                  
+                :type "void")
+                nil [5934 5974])
+            ("mouseDragged" function
+               (:parent "ofApp"
+                :arguments 
+                  ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [6066 6072])
+                    ("y" variable (:type "int") (reparse-symbol arg-sub-list) [6073 6079])
+                    ("button" variable (:type "int") (reparse-symbol arg-sub-list) [6080 6091]))                  
+                :type "void")
+                nil [6041 6095])
+            ("mousePressed" function
+               (:parent "ofApp"
+                :arguments 
+                  ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [6187 6193])
+                    ("y" variable (:type "int") (reparse-symbol arg-sub-list) [6194 6200])
+                    ("button" variable (:type "int") (reparse-symbol arg-sub-list) [6201 6212]))                  
+                :type "void")
+                nil [6162 6243])
+            ("mouseReleased" function
+               (:parent "ofApp"
+                :arguments 
+                  ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [6336 6342])
+                    ("y" variable (:type "int") (reparse-symbol arg-sub-list) [6343 6349])
+                    ("button" variable (:type "int") (reparse-symbol arg-sub-list) [6350 6361]))                  
+                :type "void")
+                nil [6310 6365])
+            ("mouseEntered" function
+               (:parent "ofApp"
+                :arguments 
+                  ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [6457 6463])
+                    ("y" variable (:type "int") (reparse-symbol arg-sub-list) [6464 6470]))                  
+                :type "void")
+                nil [6432 6474])
+            ("mouseExited" function
+               (:parent "ofApp"
+                :arguments 
+                  ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [6565 6571])
+                    ("y" variable (:type "int") (reparse-symbol arg-sub-list) [6572 6578]))                  
+                :type "void")
+                nil [6541 6582])
+            ("windowResized" function
+               (:parent "ofApp"
+                :arguments 
+                  ( ("w" variable (:type "int") (reparse-symbol arg-sub-list) [6675 6681])
+                    ("h" variable (:type "int") (reparse-symbol arg-sub-list) [6682 6688]))                  
+                :type "void")
+                nil [6649 6692])
+            ("gotMessage" function
+               (:parent "ofApp"
+                :arguments 
+                  ( ("msg" variable (:type ("ofMessage" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6782 6796]))                  
+                :type "void")
+                nil [6759 6800])
+            ("dragEvent" function
+               (:parent "ofApp"
+                :arguments 
+                  ( ("dragInfo" variable (:type ("ofDragInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6889 6909]))                  
+                :type "void")
+                nil [6867 6913]))          
+      :file "ofApp.cpp"
+      :pointmax 6914
+      :fsize 6913
+      :lastmodtime '(22476 2521 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "ofApp.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("ofMain.h" include nil nil [15 34])
+            ("ofApp" type
+               (:superclasses 
+                  ( ("ofBaseApp" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [70 77])
+                    ("setup" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [80 93])
+                    ("update" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [96 110])
+                    ("draw" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [113 125])
+                    ("keyPressed" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("key" variable (:type "int") (reparse-symbol arg-sub-list) [147 155]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [129 156])
+                    ("keyReleased" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("key" variable (:type "int") (reparse-symbol arg-sub-list) [176 184]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [159 185])
+                    ("mouseMoved" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [204 210])
+                            ("y" variable (:type "int") (reparse-symbol arg-sub-list) [211 218]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [188 219])
+                    ("mouseDragged" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [240 246])
+                            ("y" variable (:type "int") (reparse-symbol arg-sub-list) [247 253])
+                            ("button" variable (:type "int") (reparse-symbol arg-sub-list) [254 265]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [222 266])
+                    ("mousePressed" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [287 293])
+                            ("y" variable (:type "int") (reparse-symbol arg-sub-list) [294 300])
+                            ("button" variable (:type "int") (reparse-symbol arg-sub-list) [301 312]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [269 313])
+                    ("mouseReleased" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [335 341])
+                            ("y" variable (:type "int") (reparse-symbol arg-sub-list) [342 348])
+                            ("button" variable (:type "int") (reparse-symbol arg-sub-list) [349 360]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [316 361])
+                    ("mouseEntered" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [382 388])
+                            ("y" variable (:type "int") (reparse-symbol arg-sub-list) [389 395]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [364 396])
+                    ("mouseExited" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [416 422])
+                            ("y" variable (:type "int") (reparse-symbol arg-sub-list) [423 429]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [399 430])
+                    ("windowResized" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("w" variable (:type "int") (reparse-symbol arg-sub-list) [452 458])
+                            ("h" variable (:type "int") (reparse-symbol arg-sub-list) [459 465]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [433 466])
+                    ("dragEvent" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("dragInfo" variable (:type ("ofDragInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [484 504]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [469 505])
+                    ("gotMessage" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("msg" variable (:type ("ofMessage" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [524 538]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [508 539])
+                    ("font" variable (:type ("ofTrueTypeFont" type (:type "class") nil nil)) (reparse-symbol classsubparts) [543 564])
+                    ("bSendSerialMessage" variable (:type "bool") (reparse-symbol classsubparts) [568 593])
+                    ("bytesRead" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [627 646])
+                    ("bytesReadString" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [701 726])
+                    ("nBytesRead" variable (:type "int") (reparse-symbol classsubparts) [791 808])
+                    ("nTimesRead" variable (:type "int") (reparse-symbol classsubparts) [840 857])
+                    ("readTime" variable (:type "float") (reparse-symbol classsubparts) [895 911])
+                    ("u" variable (:type ("" type
+                         (:members 
+                            ( ("F" variable (:type "float") (reparse-symbol classsubparts) [955 963])
+                              ("b" variable
+                                 (:dereference 1
+                                  :type "unsigned char")
+                                  (reparse-symbol classsubparts) [967 986]))                            
+                          :type "union")
+                          nil nil)) (reparse-symbol classsubparts) [944 1011])
+                    ("outliner" variable (:type ("" type
+                         (:members 
+                            ( ("F" variable (:type "float") (reparse-symbol classsubparts) [955 963])
+                              ("b" variable
+                                 (:dereference 1
+                                  :type "unsigned char")
+                                  (reparse-symbol classsubparts) [967 986]))                            
+                          :type "union")
+                          nil nil)) (reparse-symbol classsubparts) [944 1011])
+                    ("normal" variable (:type ("" type
+                         (:members 
+                            ( ("F" variable (:type "float") (reparse-symbol classsubparts) [955 963])
+                              ("b" variable
+                                 (:dereference 1
+                                  :type "unsigned char")
+                                  (reparse-symbol classsubparts) [967 986]))                            
+                          :type "union")
+                          nil nil)) (reparse-symbol classsubparts) [944 1011])
+                    ("fd" variable (:type "int") (reparse-symbol classsubparts) [1020 1027])
+                    ("raw" variable (:type "short") (reparse-symbol classsubparts) [1036 1046])
+                    ("getData" variable (:type "int") (reparse-symbol classsubparts) [1049 1061])
+                    ("buf" variable
+                       (:dereference 1
+                        :type "short")
+                        (reparse-symbol classsubparts) [1070 1085])
+                    ("wave" variable
+                       (:dereference 1
+                        :type "float")
+                        (reparse-symbol classsubparts) [1088 1104])
+                    ("filtered" variable
+                       (:dereference 1
+                        :type "float")
+                        (reparse-symbol classsubparts) [1113 1133])
+                    ("I" variable
+                       (:dereference 1
+                        :type "short")
+                        (reparse-symbol classsubparts) [1142 1155])
+                    ("i" variable (:type "int") (reparse-symbol classsubparts) [1158 1164])
+                    ("flag" variable (:type "int") (reparse-symbol classsubparts) [1173 1182])
+                    ("serial" variable (:type ("ofSerial" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1185 1201])
+                    ("line" variable (:type ("ofPolyline" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1204 1220])
+                    ("gF" variable
+                       (:dereference 1
+                        :type "float")
+                        (reparse-symbol classsubparts) [1229 1242]))                  
+                :type "class")
+                nil [36 1245]))          
+      :file "ofApp.h"
+      :pointmax 1246
+      :fsize 1245
+      :lastmodtime '(22476 2521 0 0)
+      :unmatched-syntax '((symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2)))
+
+
+
+
+
+
+    (semanticdb-table "cserial.h"
+      :file "cserial.h"
+      :fsize 906
+      :lastmodtime '(22476 2521 0 0)))
+  :file "!Users!mark!Desktop!workbench!of_v0.9.3_osx_release!apps!serialExample!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

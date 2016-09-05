@@ -2,62 +2,95 @@
 ;; --------------------------------------------------------------------------
 ;; Desktop File for Emacs
 ;; --------------------------------------------------------------------------
-;; Created Sat Sep  3 06:26:27 2016
+;; Created Sun Sep  4 12:13:09 2016
 ;; Desktop file format version 206
 ;; Emacs version 24.5.1
 
 ;; Global section:
-(setq desktop-saved-frameset [frameset 1 (22473 64659 905940 0) (desktop . "206") "Mark@Marks-MacBook-Pro.local" nil nil ((((font-backend mac-ct ns) (fontsize . 0) (font . "-*-Menlo-normal-normal-normal-*-14-*-*-*-m-0-iso10646-1") (border-width . 0) (internal-border-width . 2) (vertical-scroll-bars) (foreground-color . "#DEDEDE") (background-color . "#161A1F") (line-spacing) (left-fringe . 8) (right-fringe . 8) (menu-bar-lines . 0) (tool-bar-lines . 0) (title) (icon-type) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (alpha) (fullscreen) (display-type . color) (background-mode . dark) (cursor-color . "#EEDC82") (powerline-cache) (frameset--id . "740A-2FAE-BE03-7B66") (frameset--mini t) (height . 50) (width . 177) (modeline . t) (minibuffer . t) (unsplittable) (left . 240) (top . 1223) (right-divider-width . 0) (bottom-divider-width . 0) (icon-name) (visibility . t) (display . "Marks-MacBook-Pro.local") (explicit-name) (tool-bar-position . top)) ((min-height . 4) (min-width . 20) (min-height-ignore . 2) (min-width-ignore . 8) (min-height-safe . 1) (min-width-safe . 4) (min-pixel-height . 64) (min-pixel-width . 160) (min-pixel-height-ignore . 32) (min-pixel-width-ignore . 64) (min-pixel-height-safe . 16) (min-pixel-width-safe . 32)) hc (pixel-width . 1432) (pixel-height . 784) (total-width . 179) (total-height . 49) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 688) (pixel-height . 784) (total-width . 86) (total-height . 49) (normal-height . 1.0) (normal-width . 0.48324022346368717) (buffer "ofApp.cpp" (selected) (hscroll . 0) (fringes 8 8 nil) (margins 9) (scroll-bars 0 0 t nil) (vscroll . 0) (dedicated) (point . 611) (start . 1))) (leaf (last . t) (pixel-width . 744) (pixel-height . 784) (total-width . 93) (total-height . 49) (normal-height . 1.0) (normal-width . 0.516759776536313) (buffer "ofApp.cpp" (selected) (hscroll . 0) (fringes 8 8 nil) (margins 9) (scroll-bars 0 0 t nil) (vscroll . 0) (dedicated) (point . 237) (start . 1)))) (((font-backend mac-ct ns) (fontsize . 0) (font . "-*-Menlo-normal-normal-normal-*-14-*-*-*-m-0-iso10646-1") (border-width . 0) (internal-border-width . 2) (vertical-scroll-bars) (foreground-color . "#DEDEDE") (background-color . "#161A1F") (line-spacing) (left-fringe . 8) (right-fringe . 8) (menu-bar-lines . 0) (tool-bar-lines . 0) (title) (icon-type) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (alpha) (fullscreen) (horizontal-scroll-bars . t) (display-type . color) (background-mode . dark) (cursor-color . "#EEDC82") (environment) (powerline-cache) (frameset--id . "75C1-D64C-EBBF-4A7C") (frameset--mini t . t) (height . 71) (width . 237) (modeline . t) (minibuffer . t) (unsplittable) (left . 0) (top . 23) (right-divider-width . 0) (bottom-divider-width . 0) (icon-name) (visibility . t) (display . "Marks-MacBook-Pro.local") (explicit-name) (tool-bar-position . top)) ((min-height . 4) (min-width . 20) (min-height-ignore . 2) (min-width-ignore . 8) (min-height-safe . 1) (min-width-safe . 4) (min-pixel-height . 64) (min-pixel-width . 160) (min-pixel-height-ignore . 32) (min-pixel-width-ignore . 64) (min-pixel-height-safe . 16) (min-pixel-width-safe . 32)) hc (pixel-width . 1912) (pixel-height . 1120) (total-width . 239) (total-height . 70) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 952) (pixel-height . 1120) (total-width . 119) (total-height . 70) (normal-height . 1.0) (normal-width . 0.5) (buffer "ofApp.cpp" (selected . t) (hscroll . 0) (fringes 8 8 nil) (margins 9) (scroll-bars 0 0 t nil) (vscroll . 0) (dedicated) (point . 612) (start . 1))) (leaf (last . t) (pixel-width . 960) (pixel-height . 1120) (total-width . 120) (total-height . 70) (normal-height . 1.0) (normal-width . 0.5) (buffer "init.el" (selected) (hscroll . 0) (fringes 8 8 nil) (margins 9) (scroll-bars 0 0 t nil) (vscroll . 0) (dedicated) (point . 2514) (start . 1945)))))])
+(setq desktop-saved-frameset [frameset 1 (22475 40789 362281 0) (desktop . "206") "Mark@Marks-MacBook-Pro.local" nil nil ((((font-backend mac-ct ns) (fontsize . 0) (font . "-*-Menlo-normal-normal-normal-*-14-*-*-*-m-0-iso10646-1") (border-width . 0) (internal-border-width . 2) (vertical-scroll-bars) (foreground-color . "#DEDEDE") (background-color . "#161A1F") (line-spacing) (left-fringe . 8) (right-fringe . 8) (menu-bar-lines . 0) (tool-bar-lines . 0) (title) (icon-type) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (alpha) (fullscreen) (horizontal-scroll-bars . t) (display-type . color) (background-mode . dark) (cursor-color . "#EEDC82") (environment) (powerline-cache) (frameset--id . "75D2-62D6-F02D-E6E8") (frameset--mini t . t) (height . 50) (width . 178) (modeline . t) (minibuffer . t) (unsplittable) (left . 240) (top . 1223) (right-divider-width . 0) (bottom-divider-width . 0) (icon-name) (visibility . t) (display . "Marks-MacBook-Pro.local") (explicit-name) (tool-bar-position . top)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 4) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 64) (min-pixel-width . 80) (min-pixel-height-ignore . 32) (min-pixel-width-ignore . 32) (min-pixel-height-safe . 16) (min-pixel-width-safe . 16)) leaf (pixel-width . 1440) (pixel-height . 784) (total-width . 180) (total-height . 49) (normal-height . 1.0) (normal-width . 1.0) (buffer "test.cpp" (selected . t) (hscroll . 0) (fringes 8 8 nil) (margins 9) (scroll-bars 0 0 t nil) (vscroll . 0) (dedicated) (point . 758) (start . 1))))])
 (setq desktop-missing-file-warning nil)
 (setq tags-file-name nil)
 (setq tags-table-list nil)
 (setq search-ring nil)
-(setq regexp-search-ring nil)
+(setq regexp-search-ring '("smart" "cc-m"))
 (setq register-alist nil)
-(setq file-name-history '("~/.emacs.d/" "~/.emacs.d/init.el" "~/Desktop/workbench/of_v0.9.3_osx_release/apps/serialExample/src/handyGraphview.cpp" "~/Desktop/workbench/of_v0.9.3_osx_release/apps/serialExample/src/ofApp.cpp"))
+(setq file-name-history '("~/.emacs.d/" "~/.emacs.d/init.el" "~/Desktop/workbench/MacUARTCommunication/test.cpp"))
 
 ;; Buffer section -- buffers listed in same order as in buffer list:
 (desktop-create-buffer 206
-  "/Users/mark/Desktop/workbench/of_v0.9.3_osx_release/apps/serialExample/src/ofApp.cpp"
-  "ofApp.cpp"
+  "/Users/mark/Desktop/workbench/MacUARTCommunication/test.cpp"
+  "test.cpp"
   'c++-mode
   '(abbrev-mode visual-line-mode linum-mode company-mode yas-minor-mode undo-tree-mode function-args-mode override-global-mode)
-  612
-  '(559 nil)
+  758
+  '(761 nil)
   nil
   nil
-  '((buffer-file-coding-system . undecided-unix) (overwrite-mode) (truncate-lines)))
+  '((buffer-file-coding-system . utf-8-unix) (overwrite-mode) (truncate-lines)))
 
 (desktop-create-buffer 206
   "/Users/mark/.emacs.d/init.el"
   "init.el"
   'emacs-lisp-mode
   '(visual-line-mode linum-mode company-mode yas-minor-mode undo-tree-mode override-global-mode smartparens-mode)
-  2514
-  '(2514 nil)
+  8363
+  '(8363 nil)
   nil
   nil
   '((buffer-file-coding-system . prefer-utf-8-unix) (overwrite-mode) (truncate-lines . t)))
 
 (desktop-create-buffer 206
-  "/Users/mark/Desktop/workbench/of_v0.9.3_osx_release/apps/serialExample/src/handyGraphview.cpp"
-  "handyGraphview.cpp"
-  'c++-mode
-  '(abbrev-mode visual-line-mode linum-mode company-mode yas-minor-mode undo-tree-mode function-args-mode override-global-mode)
-  602
-  '(602 nil)
-  nil
+  "/usr/include/sys/termios.h"
+  "termios.h"
+  'c-mode
+  '(abbrev-mode visual-line-mode linum-mode company-mode yas-minor-mode undo-tree-mode function-args-mode override-global-mode smartparens-mode)
+  1
+  '(nil nil)
+  t
   nil
   '((buffer-file-coding-system . undecided-unix) (overwrite-mode) (truncate-lines)))
 
 (desktop-create-buffer 206
-  "/Users/mark/Desktop/workbench/of_v0.9.3_osx_release/apps/serialExample/src/ofApp.h"
-  "ofApp.h"
+  "/usr/include/sys/cdefs.h"
+  "cdefs.h"
   'c-mode
   '(abbrev-mode visual-line-mode linum-mode company-mode yas-minor-mode undo-tree-mode function-args-mode override-global-mode smartparens-mode)
-  1509
+  1
   '(nil nil)
+  t
   nil
+  '((buffer-file-coding-system . undecided-unix) (overwrite-mode) (truncate-lines)))
+
+(desktop-create-buffer 206
+  "/usr/include/sys/_types/_time_t.h"
+  "_time_t.h"
+  'c-mode
+  '(abbrev-mode visual-line-mode linum-mode company-mode yas-minor-mode undo-tree-mode function-args-mode override-global-mode smartparens-mode)
+  1
+  '(nil nil)
+  t
+  nil
+  '((buffer-file-coding-system . undecided-unix) (overwrite-mode) (truncate-lines)))
+
+(desktop-create-buffer 206
+  "/usr/include/sys/unistd.h"
+  "unistd.h"
+  'c-mode
+  '(abbrev-mode visual-line-mode linum-mode company-mode yas-minor-mode undo-tree-mode function-args-mode override-global-mode smartparens-mode)
+  1
+  '(nil nil)
+  t
+  nil
+  '((buffer-file-coding-system . undecided-unix) (overwrite-mode) (truncate-lines)))
+
+(desktop-create-buffer 206
+  "/usr/include/sys/fcntl.h"
+  "fcntl.h"
+  'c-mode
+  '(abbrev-mode visual-line-mode linum-mode company-mode yas-minor-mode undo-tree-mode function-args-mode override-global-mode smartparens-mode)
+  1
+  '(nil nil)
+  t
   nil
   '((buffer-file-coding-system . undecided-unix) (overwrite-mode) (truncate-lines)))
 

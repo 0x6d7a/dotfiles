@@ -45,7 +45,7 @@
 (setq inhibit-startup-buffer-menu)
 ;; theme
 (load-theme 'spolsky t)
-(global-set-key (kbd "<f5>") 'redraw-display)
+(global-set-key (kbd "C-<f5>") 'redraw-display)
 (setq visible-bell nil)
 (setq ring-bell-function (lambda()
                          (invert-face 'mode-line)
@@ -53,7 +53,7 @@
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
-(set-face-attribute 'default nil :height 140)
+(set-face-attribute 'default nil :height 125)
 (display-time-mode)
 (global-linum-mode t) ;; Display line number
 (define-key global-map (kbd "M-g") 'goto-line) ;; Modify goto line key
@@ -80,7 +80,10 @@
       gdb-show-main t)
 
 (global-set-key (kbd "M-`") 'other-frame)
-
+(global-set-key (kbd "<f5>") (lambda()
+                                  (interactive)
+                                  (setq-local compilation-read-command nil)
+                                  (call-interactively 'compile)))
 
 ;; ACE JUMP
 (require 'ace-jump-mode)
@@ -226,9 +229,9 @@
 
 
 ;; CC-MODE
-(require 'cc-mode)
-(define-key c-mode-map [(tab)] 'company-complete)
-(define-key c++-mode-map [(tab)] 'company-complete)
+;; (require 'cc-mode)
+;; (define-key c-mode-map [(tab)] 'company-complete)
+;; (define-key c++-mode-map [(tab)] 'company-complete)
 
 
 ;; MARKDOWN MODE
@@ -319,7 +322,7 @@
 ;; YASNIPPET
 (setq yas-snippet-dirs
       '("~/.emacs.d/snippets"
-        "~/.emacs.d/elpa"
+        "~/.emacs.d/elpa/yasnippet-20160801.1142/snippets"
         ))
 (require 'yasnippet)
 (yas-global-mode 1)
