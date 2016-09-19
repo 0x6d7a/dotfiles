@@ -104,6 +104,7 @@
   (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
   (add-hook 'elpy-mode-hook 'flycheck-mode))
 (elpy-enable)
+(setq exec-path-from-shell-arguments '("-l"))
 (exec-path-from-shell-copy-env "PATH")
 (elpy-use-ipython)
 
@@ -204,6 +205,8 @@
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key (kbd "C-c o")
                 (lambda () (interactive) (find-file "~/Dropbox/Org/gtd.org")))
+(global-set-key (kbd "C-c m")
+                (lambda () (interactive) (find-file "~/Documents/Markdown/scratches.md")))
 ;; Org capture templates
 (setq org-capture-templates
       (quote (("t" "Tasks" entry
@@ -238,7 +241,7 @@
 (autoload 'markdown-mode "markdown-mode"
   "Major mode for editing Markdown files" t)
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
-(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode-hook))
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
 ;; MAGIT
 (global-set-key (kbd "C-x g") 'magit-status)
@@ -342,6 +345,7 @@
    (quote
     ("0c29db826418061b40564e3351194a3d4a125d182c6ee5178c237a7364f0ff12" default)))
  '(fci-rule-color "#d6d6d6")
+ '(markdown-enable-math t)
  '(org-agenda-files
    (quote
     ("~/Dropbox/Org/gtd.org" "~/Dropbox/Org/refiles.org")))

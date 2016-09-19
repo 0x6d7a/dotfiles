@@ -51,7 +51,8 @@
   :type 'integer)
 
 (defcustom markdown-preview-style
-  "http://thomasf.github.io/solarized-css/solarized-dark.min.css"
+  ;; "http://thomasf.github.io/solarized-css/solarized-dark.min.css"
+  "/Users/mark/.emacs.d/foghorn.css"
   "Markdown preview style URI."
   :group 'markdown-preview
   :type 'string)

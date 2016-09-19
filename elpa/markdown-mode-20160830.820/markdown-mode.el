@@ -960,7 +960,6 @@
 (defconst markdown-output-buffer-name "*markdown-output*"
   "Name of temporary buffer for markdown command output.")
 
-
 ;;; Global Variables ==========================================================
 
 (defvar markdown-reference-label-history nil
@@ -972,7 +971,6 @@
 (defvar markdown-gfm-language-history nil
   "History list of languages used in the current buffer in GFM code blocks.")
 
-
 ;;; Customizable Variables ====================================================
 
 (defvar markdown-mode-hook nil
@@ -5864,7 +5862,14 @@ Standalone XHTML output is identified by an occurrence of
           "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\"\n"
           "\t\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n\n"
           "<html xmlns=\"http://www.w3.org/1999/xhtml\">\n\n"
-          "<head>\n<title>")
+          "<head>\n"
+          "<script src=\"http://code.jquery.com/jquery-1.11.0.min.js\"></script>\n"
+          "<script type=\"text/x-mathjax-config\">
+MathJax.Hub.Config({tex2jax: {inlineMath: ['$$','$$']}});
+</script>\n"
+          "<script src=\"/Users/mark/.emacs.d/MathJax/MathJax.js?config=TeX-MML-AM_CHTML\"></script>\n"
+          "<link href=\"/Users/mark/.emacs.d/foghorn.css\" rel=\"stylesheet\"></link>\n\n"
+          "<title>")
   (insert title)
   (insert "</title>\n")
   (when (> (length markdown-content-type) 0)

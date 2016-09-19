@@ -4,14 +4,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
     <title>Markdown preview</title>
-    <link href="http://thomasf.github.io/solarized-css/solarized-dark.min.css" rel="stylesheet"></link>
     <style>
      code.json {
          line-height: 1.2em;
      }
     </style>
+    <script type="text/x-mathjax-config">
+     MathJax.Hub.Config({
+         tex2jax: {inlineMath: [['$','$'], ['$$','$$']]}
+     });
+    </script>
+    <script src="/Users/mark/.emacs.d/MathJax/MathJax.js?config=TeX-MML-AM_CHTML"></script>
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script>
+        <script>
      (function($, undefined) {
          var socket = new WebSocket("ws://localhost:7379");
          socket.onopen = function() {
@@ -26,7 +31,7 @@
              console.log('Code: ' + event.code + ' reason: ' + event.reason);
          };
          socket.onmessage = function(event) {
-             loadCSS($(event.data).find("#style").text());
+             // loadCSS($(event.data).find("#style").text());
              $("#markdown-body").html($(event.data).find("#content").html());
              var scroll = $(document).height() * ($(event.data).find("#position-percentage").html() / 100);
              $("html, body").animate({ scrollTop: scroll }, 600);

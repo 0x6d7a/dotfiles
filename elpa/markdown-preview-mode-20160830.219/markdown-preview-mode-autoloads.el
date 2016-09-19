@@ -4,7 +4,7 @@
 (add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
 ;;;### (autoloads nil "markdown-preview-mode" "markdown-preview-mode.el"
-;;;;;;  (22473 35759 0 0))
+;;;;;;  (22495 11138 0 0))
 ;;; Generated autoloads from markdown-preview-mode.el
 
 (autoload 'markdown-preview-open-browser "markdown-preview-mode" "\
@@ -24,8 +24,8 @@ Markdown preview mode.
 
 ;;;***
 
-;;;### (autoloads nil nil ("markdown-preview-mode-pkg.el") (22473
-;;;;;;  35759 863554 0))
+;;;### (autoloads nil nil ("markdown-preview-mode-pkg.el") (22495
+;;;;;;  11138 566747 0))
 
 ;;;***
 

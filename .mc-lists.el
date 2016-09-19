@@ -4,11 +4,13 @@
 (setq mc/cmds-to-run-for-all
       '(
         ace-jump-word-mode
+        beginning-of-visual-line
         c-electric-semi&comma
         c-electric-slash
         comment-region
         complete-symbol
         evil-append
+        evil-append-line
         evil-backward-char
         evil-backward-word-begin
         evil-delete-char
@@ -16,11 +18,13 @@
         evil-exit-visual-state
         evil-force-normal-state
         evil-forward-word-end
+        evil-inner-bracket
         evil-insert
         evil-next-line
         evil-normal-state
         evil-paste-after
         evil-previous-line
+        evil-scroll-page-down
         evil-visual-char
         evil-yank
         keyboard-escape-quit
@@ -31,6 +35,7 @@
 (setq mc/cmds-to-run-once
       '(
         evil-forward-char
+        evil-mouse-drag-region
         evil-search-next
         goto-line
         ibuffer
