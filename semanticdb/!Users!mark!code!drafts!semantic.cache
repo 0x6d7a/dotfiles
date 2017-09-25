@@ -1,0 +1,204 @@
+;; Object drafts/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "drafts/"
+  :tables
+  (list
+    (semanticdb-table "test.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("slice" variable (:constant-flag t) nil [29 34])
+            ("slice" variable (:constant-flag t) nil [29 34])
+            ("slice" variable (:constant-flag t) nil [29 34])
+            ("slice" variable (:constant-flag t) nil [29 34])
+            ("slice" variable (:constant-flag t) nil [29 34])
+            ("ratio" variable (:constant-flag t) nil [47 52])
+            ("size" variable (:constant-flag t) nil [66 70])
+            ("size" variable (:constant-flag t) nil [66 70])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [95 104])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [105 118]))                  
+                :type "int")
+                nil [86 166]))          
+      :file "test.c"
+      :pointmax 168
+      :fsize 167
+      :lastmodtime '(22889 63495 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("slice" . ((number "800" 35 . 38)))
+          ("size" . ((semantic-list "(slice/ratio)" 71 . 84)))
+          )
+)
+    (semanticdb-table "read_mic.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("portaudio.h" include nil nil [1 23])
+            ("stdlib.h" include (:system-flag t) nil [24 43])
+            ("stdio.h" include (:system-flag t) nil [44 62])
+            ("SAMPLE_RATE" variable (:constant-flag t) nil [83 94])
+            ("FRAMES_PER_BUFFER" variable (:constant-flag t) nil [111 128])
+            ("PA_SAMPLE_TYPE" variable (:constant-flag t) nil [144 158])
+            ("NUM_CHANNELS" variable (:constant-flag t) nil [177 189])
+            ("NUM_CHANNELS" variable (:constant-flag t) nil [177 189])
+            ("NUM_CHANNELS" variable (:constant-flag t) nil [177 189])
+            ("NUM_CHANNELS" variable (:constant-flag t) nil [177 189])
+            ("NUM_CHANNELS" variable (:constant-flag t) nil [177 189])
+            ("NUM_CHANNELS" variable (:constant-flag t) nil [177 189])
+            ("NUM_CHANNELS" variable (:constant-flag t) nil [177 189])
+            ("NUM_CHANNELS" variable (:constant-flag t) nil [177 189])
+            ("NUM_CHANNELS" variable (:constant-flag t) nil [177 189])
+            ("PRINT_S_FORMAT" variable (:constant-flag t) nil [200 214])
+            ("SAMPLE" type
+               (:typedef ("float")
+                :type "typedef")
+                nil [223 244])
+            ("paTestData" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("recordedSamples" variable
+                             (:pointer 1
+                              :type ("SAMPLE" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [267 291]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [246 305])
+            ("recordCallBack" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("inputBuffer" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [334 358])
+                    ("outputBuffer" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [359 378])
+                    ("framesPerBuffer" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [378 408])
+                    ("timeInfo" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("PaStreamCallbackTimeInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [408 449])
+                    ("statusFlags" variable (:type ("PaStreamCallbackFlags" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [449 483])
+                    ("userData" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [483 498]))                  
+                :type "int")
+                nil [308 693])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [704 713])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [714 727]))                  
+                :type "int")
+                nil [695 2371]))          
+      :file "read_mic.c"
+      :pointmax 2372
+      :fsize 2371
+      :lastmodtime '(22981 63726 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("NUM_CHANNELS" . ((number "1" 190 . 191)))
+          ("SAMPLE_RATE" . ((semantic-list "(48000)" 95 . 102)))
+          ("PA_SAMPLE_TYPE" . ((symbol "paInt16" 159 . 166)))
+          ("PRINT_S_FORMAT")
+          ("FRAMES_PER_BUFFER" . ((semantic-list "(4096)" 129 . 135)))
+          )
+)
+    (semanticdb-table "read_mic_block.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("portaudio.h" include nil nil [1 23])
+            ("stdlib.h" include (:system-flag t) nil [24 43])
+            ("stdio.h" include (:system-flag t) nil [44 62])
+            ("SAMPLE_RATE" variable (:constant-flag t) nil [83 94])
+            ("FRAMES_PER_BUFFER" variable (:constant-flag t) nil [111 128])
+            ("PA_SAMPLE_TYPE" variable (:constant-flag t) nil [144 158])
+            ("NUM_CHANNELS" variable (:constant-flag t) nil [177 189])
+            ("PRINT_S_FORMAT" variable (:constant-flag t) nil [200 214])
+            ("SAMPLE" type
+               (:typedef ("float")
+                :type "typedef")
+                nil [223 244])
+            ("paTestData" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("recordedSamples" variable
+                             (:pointer 1
+                              :type ("SAMPLE" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [267 291]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [246 305])
+            ("recordCallBack" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("inputBuffer" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [334 358])
+                    ("outputBuffer" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [359 378])
+                    ("framesPerBuffer" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [378 408])
+                    ("timeInfo" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("PaStreamCallbackTimeInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [408 449])
+                    ("statusFlags" variable (:type ("PaStreamCallbackFlags" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [449 483])
+                    ("userData" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [483 498]))                  
+                :type "int")
+                nil [308 693])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [704 713])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [714 727]))                  
+                :type "int")
+                nil [695 2371]))          
+      :file "read_mic_block.c"
+      :pointmax 2372
+      :fsize 2371
+      :lastmodtime '(22981 65258 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("NUM_CHANNELS" . ((number "1" 190 . 191)))
+          ("SAMPLE_RATE" . ((semantic-list "(48000)" 95 . 102)))
+          ("PA_SAMPLE_TYPE" . ((symbol "paFloat32" 159 . 168)))
+          ("PRINT_S_FORMAT" . ((string "\"%0.8f\"" 215 . 222)))
+          ("FRAMES_PER_BUFFER" . ((semantic-list "(4096)" 129 . 135)))
+          )
+)
+    (semanticdb-table "goertzel.c"
+      :major-mode 'c-mode
+      :tags nil
+      :file "goertzel.c"
+      :pointmax 877
+      :fsize 876
+      :lastmodtime '(22984 32062 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!mark!code!drafts!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

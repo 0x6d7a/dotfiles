@@ -1,0 +1,128 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables
+  (list
+    (semanticdb-table "pdm_sampling.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("pdm_sampling.h" include nil nil [360 385])
+            ("Pulse" variable
+               (:default-value "200"
+                :type ("uint16_t" type (:type "class") nil nil))
+                nil [386 407])
+            ("time_ellapsed" variable
+               (:default-value "0"
+                :type ("float32_t" type (:type "class") nil nil))
+                nil [408 436])
+            ("Pulse_count" variable
+               (:default-value "0"
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [437 462])
+            ("freq" variable
+               (:default-value "0"
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [463 481])
+            ("timer_cnt" variable
+               (:default-value "0"
+                :type "int")
+                nil [482 500])
+            ("timer_reset" variable
+               (:default-value "0"
+                :type "int")
+                nil [501 521])
+            ("chirp_flag" variable
+               (:default-value "1"
+                :type "int")
+                nil [555 574])
+            ("timer_flag" variable
+               (:default-value "0"
+                :type "int")
+                nil [575 594])
+            ("spi2_flag" variable
+               (:default-value "0"
+                :type "int")
+                nil [595 613])
+            ("spi3_flag" variable
+               (:default-value "0"
+                :type "int")
+                nil [614 632])
+            ("dma_flag" variable
+               (:default-value "0"
+                :type "int")
+                nil [633 650])
+            ("W_BeginSampling" function (:type "void") nil [653 710])
+            ("W_Init" function
+               (:arguments 
+                  ( ("AudioFreq" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [728 747]))                  
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [712 1763])
+            ("W_Start" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1778 1783]))                  
+                :type "void")
+                nil [1765 2303])
+            ("W_GPIO_Init" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2330 2335]))                  
+                :type "void")
+                nil [2306 5757])
+            ("W_SPI_I2S_Init" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("Freq" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5786 5800]))                  
+                :type "void")
+                nil [5759 6916])
+            ("W_DMA_Init" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [6941 6946]))                  
+                :type "void")
+                nil [6918 9799])
+            ("W_NVIC_Init" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [9825 9830]))                  
+                :type "void")
+                nil [9801 11133])
+            ("W_USART_Init" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [11160 11165]))                  
+                :type "void")
+                nil [11135 11816])
+            ("W_TIM3_Init" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [11841 11846]))                  
+                :type "void")
+                nil [11817 13105])
+            ("W_TIM3_Update" function
+               (:arguments 
+                  ( ("compare" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13125 13142]))                  
+                :type "void")
+                nil [13106 13195])
+            ("DMA1_Stream3_IRQHandler" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [13226 13231]))                  
+                :type "void")
+                nil [13197 14179])
+            ("DMA1_Stream2_IRQHandler" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [14210 14215]))                  
+                :type "void")
+                nil [14181 15221])
+            ("TIM3_IRQHandler" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [15244 15249]))                  
+                :type "void")
+                nil [15223 16577]))          
+      :file "pdm_sampling.c"
+      :pointmax 16577
+      :fsize 17060
+      :lastmodtime '(22339 62915 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!mark!Desktop!MaxusProjects!repo_stm32!wiknew_2d!Source!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

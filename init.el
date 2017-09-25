@@ -2,6 +2,7 @@
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/") t)
+(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
 (add-to-list 'load-path "~/.emacs.d/plugin/")
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 (package-initialize)
@@ -16,12 +17,14 @@
 	flycheck ;; Add flycheck package
     magit
     neotree
-    yasnippet
+;;    yasnippet
     company
     window-numbering
     smart-mode-line
-    smex
-    markdown-mode
+;;    smex
+;;    markdown-mode
+    chinese-fonts-setup
+    pyenv-mode
 ;;    exec-path-from-shell-copy
     smartparens
     helm
@@ -31,7 +34,6 @@
     helm-company
     helm-swoop
     ace-jump-mode
-    expand-region
 	material-theme))
 
 (mapc #'(lambda (package)
@@ -91,6 +93,11 @@
 (define-key global-map (kbd "C-c C-u") 'ace-jump-char-mode)
 (define-key global-map (kbd "C-c C-c C-u") 'ace-jump-line-mode)
 
+
+;; CHINESE-FONTS-SETUP
+(require 'chinese-fonts-setup)
+(chinese-fonts-setup-enable)
+
 ;; CLEAN-AINDENT
 (require 'clean-aindent-mode)
 (clean-aindent-mode 1)
@@ -104,9 +111,13 @@
   (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
   (add-hook 'elpy-mode-hook 'flycheck-mode))
 (elpy-enable)
-(setq exec-path-from-shell-arguments '("-l"))
+;; (setq exec-path-from-shell-arguments '("-i"))
 (exec-path-from-shell-copy-env "PATH")
-(elpy-use-ipython)
+(setq exec-path-from-shell-arguments '("-l"))
+;; (elpy-use-ipython "ipython")
+(setq python-shell-interpreter-args "")
+(setq elpy-rpc-backend "jedi")
+;; (pyenv-mode t)
 
 ;; EMMET
 (require 'emmet-mode)
@@ -138,8 +149,8 @@
 (evil-mode t)
 
 ;; FUNCTION ARGS
-(require 'function-args)
-(fa-config-default)
+; (require 'function-args)
+; (fa-config-default)
 
 ;; HELM
 (require 'helm)
@@ -170,7 +181,7 @@
 (linum-on)
 
 ;; JS2-MODE
-(require 'js2-mode)
+;; (require 'js2-mode)
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 (add-to-list 'interpreter-mode-alist '("node" . js2-mode))
 
@@ -203,15 +214,20 @@
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cb" 'org-switchb)
 (global-set-key "\C-cc" 'org-capture)
-(global-set-key (kbd "C-c o")
+(global-set-key (kbd "C-c g")
                 (lambda () (interactive) (find-file "~/Dropbox/Org/gtd.org")))
-(global-set-key (kbd "C-c m")
-                (lambda () (interactive) (find-file "~/Documents/Markdown/scratches.md")))
+(global-set-key (kbd "C-c j")
+                (lambda () (interactive) (find-file "~/Dropbox/Org/journals.org")))
+(global-set-key (kbd "C-c n")
+                (lambda () (interactive) (find-file "~/Dropbox/Org/notes.org")))
+(global-set-key (kbd "C-c r")
+                (lambda () (interactive) (find-file "~/Dropbox/Org/refiles.org")))
+
 ;; Org capture templates
 (setq org-capture-templates
       (quote (("t" "Tasks" entry
                (file+headline "~/Dropbox/Org/refiles.org" "Inbox")
-               "* TODO %^{Task}\nDEADLINE: %^t\n%?\n")
+               "* TODO %^{Task}\nSCHEDULED: %^t\n%?\n")
               ("T" "Quick Tasks" entry
                (file+headline "~/Dropbox/Org/refiles.org" "Inbox")
                "* TODO %^{Task}\n%t\n"
@@ -220,15 +236,26 @@
                (file+headline "~/Dropbox/Org/refiles.org" "Notes")
                "* %^{Note} \n%U\n%?")
               ("N" "Quick Notes" item
-               (file+headline "~/Dropbox/Org/refiles.org" "Quick Notes"))
+               (file+headline "~/Dropbox/Org/refiles.org" "Notes"))
               ("j" "Journals" plain
-               (file+datetree "~/Dropbox/Personal/journals.org")
+               (file+datetree "~/Dropbox/Org/journals.org")
                "**** %U %^{Title}\n%?"
                :unnarrowed t)
               )))
 
+(setq org-todo-keywords
+  '((sequence "TODO" "DOING" "POSTPONED" "DONE")))
+(setq org-todo-keyword-faces
+  '(("DOING" . "yellow") ("POSTPONED" . (:foreground "white" :background "red"))))
+
 (require 'org-bullets)
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+;; warn me of any dealines in next 7 days
+(setq org-deadline-warning-days 7)
+;; don't show tasks as scheduled if they are already shown as a dealine
+(setq org-agenda-skip-scheduled-if-deadline-is-shown t)
+(setq org-agenda-skip-scheduled-if-done t)
+(setq org-agenda-skip-deadline-prewarning-if-scheduled (quote pre-scheduled))
 
 
 ;; CC-MODE
@@ -238,10 +265,10 @@
 
 
 ;; MARKDOWN MODE
-(autoload 'markdown-mode "markdown-mode"
-  "Major mode for editing Markdown files" t)
-(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
-(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+;; (autoload 'markdown-mode "markdown-mode"
+;;   "Major mode for editing Markdown files" t)
+;; (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+;; (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
 ;; MAGIT
 (global-set-key (kbd "C-x g") 'magit-status)
@@ -292,13 +319,10 @@
   (forward-line -1)
   (indent-according-to-mode))
 
-
-
-
 ;; SMEX
-(global-set-key (kbd "C-x m") 'smex)
-(global-set-key (kbd "M-X") 'smex-major-mode-commands)
-(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command) ;; This is the old M-x
+;; (global-set-key (kbd "C-x m") 'smex)
+;; (global-set-key (kbd "M-X") 'smex-major-mode-commands)
+;; (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command) ;; This is the old M-x
 
 ;; UNDO-TREE
 (global-set-key (kbd "M-/") 'undo-tree-visualize)
@@ -325,7 +349,7 @@
 ;; YASNIPPET
 (setq yas-snippet-dirs
       '("~/.emacs.d/snippets"
-        "~/.emacs.d/elpa/yasnippet-20160801.1142/snippets"
+        "~/.emacs.d/plugins/yasnippet"
         ))
 (require 'yasnippet)
 (yas-global-mode 1)
@@ -341,21 +365,22 @@
    [default bold shadow italic underline bold bold-italic bold])
  '(ansi-color-names-vector
    (vector "#4d4d4c" "#c82829" "#718c00" "#eab700" "#4271ae" "#8959a8" "#3e999f" "#d6d6d6"))
+ '(cfs--current-profile "profile1" t)
+ '(cfs--profiles-steps (quote (("profile1" . 6))) t)
  '(custom-safe-themes
    (quote
     ("0c29db826418061b40564e3351194a3d4a125d182c6ee5178c237a7364f0ff12" default)))
+ '(elpy-rpc-python-command "/usr/local/bin/python3")
  '(fci-rule-color "#d6d6d6")
  '(markdown-enable-math t)
- '(org-agenda-files
-   (quote
-    ("~/Dropbox/Org/gtd.org" "~/Dropbox/Org/refiles.org")))
+ '(org-agenda-files (quote ("~/Dropbox/Org/gtd.org")))
  '(org-hide-emphasis-markers t)
  '(org-hide-leading-stars t)
  '(org-modules
    (quote
     (org-bbdb org-bibtex org-docview org-gnus org-habit org-info org-irc org-mhe org-rmail org-w3m)))
  '(org-refile-targets (quote ((org-agenda-files :maxlevel . 6))))
- '(org-todo-keywords (quote ((sequence "TODO" "DOING" "DONE" "CANCLED")))))
+ '(pyvenv-virtualenvwrapper-python "/usr/local/bin/python3"))
 
 ;;; sRGB doesn't blend with Powerline's pixmap colors, but is only
 ;;; used in OS X. Disable sRGB before setting up Powerline.
@@ -369,6 +394,14 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(org-level-1 ((t (:inherit outline-1))))
+ '(org-level-2 ((t (:foreground "#6592e4"))))
+ '(org-level-3 ((t (:inherit outline-2))))
+ '(org-level-4 ((t (:inherit outline-4))))
+ '(org-level-5 ((t (:inherit outline-5))))
+ '(org-level-6 ((t (:foreground "brown"))))
+ '(org-level-7 ((t (:inherit outline-8))))
+ '(org-level-8 ((t (:foreground "grey"))))
  '(powerline-evil-normal-face ((t (:inherit powerline-evil-base-face :background "chartreuse3"))))
  '(term ((t (:foreground "ivory1"))))
  '(term-color-black ((t (:foreground "gray80"))))

@@ -13,13 +13,18 @@
         evil-append-line
         evil-backward-char
         evil-backward-word-begin
+        evil-delete
         evil-delete-char
         evil-end-of-line
         evil-exit-visual-state
+        evil-first-non-blank
         evil-force-normal-state
+        evil-forward-WORD-end
+        evil-forward-word-begin
         evil-forward-word-end
         evil-inner-bracket
         evil-insert
+        evil-jump-item
         evil-next-line
         evil-normal-state
         evil-paste-after
@@ -29,7 +34,10 @@
         evil-yank
         keyboard-escape-quit
         org-force-self-insert
+        org-insert-heading-respect-content
+        org-metaleft
         org-self-insert-command
+        smex-major-mode-commands
         ))
 
 (setq mc/cmds-to-run-once
@@ -38,6 +46,7 @@
         evil-mouse-drag-region
         evil-search-next
         goto-line
+        helm-M-x
         ibuffer
         isearch-delete-char
         isearch-forward-regexp

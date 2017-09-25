@@ -4,17 +4,17 @@
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
 (("org-capture-last-stored-marker"
  (filename . "~/Dropbox/Org/gtd.org")
- (front-context-string . "** TODO Link mar")
- (rear-context-string . "-09-08 Thu>\n \n\n\n")
- (position . 13355))
+ (front-context-string . "** TODO Negotiat")
+ (rear-context-string . "theme\n   3) ...\n")
+ (position . 2240))
 ("org-refile-last-stored"
  (filename . "~/Dropbox/Org/gtd.org")
- (front-context-string . "** TODO Link mar")
- (rear-context-string . "-09-08 Thu>\n \n\n\n")
- (position . 13355))
+ (front-context-string . "** TODO Negotiat")
+ (rear-context-string . "theme\n   3) ...\n")
+ (position . 2240))
 ("org-capture-last-stored"
  (filename . "~/Dropbox/Org/refiles.org")
- (front-context-string . "** TODO Link mar")
- (rear-context-string . "ta in realtime.\n")
- (position . 3737))
+ (front-context-string . "** Business trip")
+ (rear-context-string . "ected namecard)\n")
+ (position . 2346))
 )
