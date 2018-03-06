@@ -18,18 +18,19 @@
 
 (defvar myPackages
   '(better-defaults
-	elpy ;; Add elpy package
-	flycheck ;; Add flycheck package
+	elpy
+	flycheck
     magit
     neotree
+	evil
 ;;    yasnippet
     company
+	linum-relative
     window-numbering
     smart-mode-line
 ;;    smex
-    chinese-fonts-setup
+;;	cnfonts
     pyenv-mode
-;;    exec-path-from-shell-copy
     smartparens
     helm
     sublime-themes
@@ -38,6 +39,7 @@
     helm-company
     helm-swoop
     ace-jump-mode
+	nyan-mode
 	material-theme))
 
 (mapc #'(lambda (package)
@@ -137,9 +139,9 @@
 ;; (pyenv-mode t)
 
 ;; EMMET
-(require 'emmet-mode)
-(add-hook 'html-mode-hook 'emmet-mode)
-(add-hook 'css-mode-hook 'emmet-mode)
+;; (require 'emmet-mode)
+;; (add-hook 'html-mode-hook 'emmet-mode)
+;; (add-hook 'css-mode-hook 'emmet-mode)
 
 
 ;; EXPAND-REGION
@@ -199,8 +201,8 @@
 
 ;; JS2-MODE
 ;; (require 'js2-mode)
-(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
-(add-to-list 'interpreter-mode-alist '("node" . js2-mode))
+;; (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+;; (add-to-list 'interpreter-mode-alist '("node" . js2-mode))
 
 
 ;; KEY-CHORD
@@ -314,7 +316,7 @@
 ;; (setq sml/no-confirm-load-theme t)
 ;; (sml/setup)
 
-(require 'init-powerline)
+;; (require 'init-powerline)
 
 ;; SMARTPARENS
 (require 'smartparens-config)
