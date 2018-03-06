@@ -7,6 +7,11 @@
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 (package-initialize)
 
+(when (memq window-system '(mac ns))
+  (setenv "SHELL" "/bin/zsh")
+  (exec-path-from-shell-initialize)
+  (exec-path-from-shell-copy-envs '("PATH")))
+
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
@@ -22,7 +27,6 @@
     window-numbering
     smart-mode-line
 ;;    smex
-;;    markdown-mode
     chinese-fonts-setup
     pyenv-mode
 ;;    exec-path-from-shell-copy
@@ -87,6 +91,19 @@
                                   (setq-local compilation-read-command nil)
                                   (call-interactively 'compile)))
 
+;; TERMINAL
+(defun visit-term-buffer ()
+  "Create or visit a terminal buffer."
+  (interactive)
+  (if (not (get-buffer "*ansi-term*"))
+      (progn
+        (split-window-sensibly (selected-window))
+        (other-window 1)
+        (ansi-term (getenv "SHELL")))
+    (switch-to-buffer-other-window "*ansi-term*")))
+
+(global-set-key (kbd "C-c t") 'visit-term-buffer)
+
 ;; ACE JUMP
 (require 'ace-jump-mode)
 (define-key global-map (kbd "C-c u") 'ace-jump-word-mode)
@@ -112,8 +129,8 @@
   (add-hook 'elpy-mode-hook 'flycheck-mode))
 (elpy-enable)
 ;; (setq exec-path-from-shell-arguments '("-i"))
-(exec-path-from-shell-copy-env "PATH")
-(setq exec-path-from-shell-arguments '("-l"))
+;; (exec-path-from-shell-copy-env "PATH")
+;; (setq exec-path-from-shell-arguments '("-l"))
 ;; (elpy-use-ipython "ipython")
 (setq python-shell-interpreter-args "")
 (setq elpy-rpc-backend "jedi")
@@ -369,16 +386,18 @@
  '(cfs--profiles-steps (quote (("profile1" . 6))) t)
  '(custom-safe-themes
    (quote
-    ("0c29db826418061b40564e3351194a3d4a125d182c6ee5178c237a7364f0ff12" default)))
+	("0c29db826418061b40564e3351194a3d4a125d182c6ee5178c237a7364f0ff12" default)))
  '(elpy-rpc-python-command "/usr/local/bin/python3")
  '(fci-rule-color "#d6d6d6")
+ '(linum-relative-current-symbol "")
+ '(linum-relative-global-mode t)
  '(markdown-enable-math t)
  '(org-agenda-files (quote ("~/Dropbox/Org/gtd.org")))
  '(org-hide-emphasis-markers t)
  '(org-hide-leading-stars t)
  '(org-modules
    (quote
-    (org-bbdb org-bibtex org-docview org-gnus org-habit org-info org-irc org-mhe org-rmail org-w3m)))
+	(org-bbdb org-bibtex org-docview org-gnus org-habit org-info org-irc org-mhe org-rmail org-w3m)))
  '(org-refile-targets (quote ((org-agenda-files :maxlevel . 6))))
  '(pyvenv-virtualenvwrapper-python "/usr/local/bin/python3"))
 
@@ -394,6 +413,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(linum-relative-current-face ((t (:inherit linum :background "#444444" :foreground "Orange" :weight bold))))
  '(org-level-1 ((t (:inherit outline-1))))
  '(org-level-2 ((t (:foreground "#6592e4"))))
  '(org-level-3 ((t (:inherit outline-2))))
