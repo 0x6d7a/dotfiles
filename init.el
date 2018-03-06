@@ -23,13 +23,14 @@
     magit
     neotree
 	evil
-;;    yasnippet
+    yasnippet-snippets
     company
 	linum-relative
+	clean-aindent-mode
     window-numbering
     smart-mode-line
 ;;    smex
-;;	cnfonts
+	cnfonts
     pyenv-mode
     smartparens
     helm
@@ -50,7 +51,7 @@
 
 ;; BASIC CUSTOMIZATION
 (setq inhibit-splash-screen t)
-(setq inhibit-startup-buffer-menu)
+;; (setq inhibit-startup-buffer-menu)
 ;; theme
 (load-theme 'spolsky t)
 (global-set-key (kbd "C-<f5>") 'redraw-display)
@@ -114,8 +115,8 @@
 
 
 ;; CHINESE-FONTS-SETUP
-(require 'chinese-fonts-setup)
-(chinese-fonts-setup-enable)
+;; (require 'chinese-fonts-setup)
+;; (chinese-fonts-setup-enable)
 
 ;; CLEAN-AINDENT
 (require 'clean-aindent-mode)
@@ -347,17 +348,17 @@
 (global-set-key (kbd "M-/") 'undo-tree-visualize)
 
 ;; WEB MODE
-(require 'web-mode)
-(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.[agj]sp\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
-(setq web-mode-enable-current-column-highlight t)
-(setq web-mode-enable-current-element-highlight t)
+;; (require 'web-mode)
+;; (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.[agj]sp\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
+;; (setq web-mode-enable-current-column-highlight t)
+;; (setq web-mode-enable-current-element-highlight t)
 
 ;; WINDOW NUMBERING
 (window-numbering-mode 1)
@@ -401,6 +402,9 @@
    (quote
 	(org-bbdb org-bibtex org-docview org-gnus org-habit org-info org-irc org-mhe org-rmail org-w3m)))
  '(org-refile-targets (quote ((org-agenda-files :maxlevel . 6))))
+ '(package-selected-packages
+   (quote
+	(yasnippet-snippets cnfonts window-numbering use-package sublime-themes smex smartparens smart-mode-line pyenv-mode org-bullets nyan-mode neotree multiple-cursors material-theme markdown-mode magit linum-relative helm-swoop helm-company function-args flycheck expand-region exec-path-from-shell evil emmet-mode elpy clean-aindent-mode better-defaults ace-jump-mode)))
  '(pyvenv-virtualenvwrapper-python "/usr/local/bin/python3"))
 
 ;;; sRGB doesn't blend with Powerline's pixmap colors, but is only
