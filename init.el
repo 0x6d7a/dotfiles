@@ -92,6 +92,33 @@
                                   (interactive)
                                   (setq-local compilation-read-command nil)
                                   (call-interactively 'compile)))
+(defun toggle-window-split ()
+  (interactive)
+  (if (= (count-windows) 2)
+      (let* ((this-win-buffer (window-buffer))
+	     (next-win-buffer (window-buffer (next-window)))
+	     (this-win-edges (window-edges (selected-window)))
+	     (next-win-edges (window-edges (next-window)))
+	     (this-win-2nd (not (and (<= (car this-win-edges)
+					 (car next-win-edges))
+				     (<= (cadr this-win-edges)
+					 (cadr next-win-edges)))))
+	     (splitter
+	      (if (= (car this-win-edges)
+		     (car (window-edges (next-window))))
+		  'split-window-horizontally
+		'split-window-vertically)))
+	(delete-other-windows)
+	(let ((first-win (selected-window)))
+	  (funcall splitter)
+	  (if this-win-2nd (other-window 1))
+	  (set-window-buffer (selected-window) this-win-buffer)
+	  (set-window-buffer (next-window) next-win-buffer)
+	  (select-window first-win)
+	  (if this-win-2nd (other-window 1))))))
+
+(global-set-key (kbd "C-x |") 'toggle-window-split)
+
 
 ;; TERMINAL
 (defun visit-term-buffer ()
@@ -114,8 +141,12 @@
 
 
 ;; CHINESE-FONTS-SETUP
-(require 'chinese-fonts-setup)
-(chinese-fonts-setup-enable)
+;; (require 'chinese-fonts-setup)
+;; (chinese-fonts-setup-enable)
+(require 'cnfonts)
+(cnfonts-enable)
+(setq cnfonts-profiles
+    '("program"))
 
 ;; CLEAN-AINDENT
 (require 'clean-aindent-mode)
@@ -129,14 +160,12 @@
 (when (require 'flycheck nil t)
   (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
   (add-hook 'elpy-mode-hook 'flycheck-mode))
-(elpy-enable)
-;; (setq exec-path-from-shell-arguments '("-i"))
-;; (exec-path-from-shell-copy-env "PATH")
-;; (setq exec-path-from-shell-arguments '("-l"))
-;; (elpy-use-ipython "ipython")
+(setq elpy-rpc-python-command "python3")
+(setq elpy-use-ipython "ipython3")
 (setq python-shell-interpreter-args "")
 (setq elpy-rpc-backend "jedi")
 ;; (pyenv-mode t)
+(elpy-enable)
 
 ;; EMMET
 ;; (require 'emmet-mode)
@@ -223,7 +252,7 @@
    (perl . t)
    (C . t))
  )
-(setq org-directory "~/Dropbox/Org")
+(setq org-directory "~/Documents/Org")
 (setq org-default-notes-file (concat org-directory "/notes.org"))
 (setq org-log-done 'time)
 (setq org-export-coding-system 'utf-8)
@@ -234,38 +263,47 @@
 (global-set-key "\C-cb" 'org-switchb)
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key (kbd "C-c g")
-                (lambda () (interactive) (find-file "~/Dropbox/Org/gtd.org")))
+                (lambda () (interactive) (find-file "~/Documents/Org/gtd.org")))
 (global-set-key (kbd "C-c j")
-                (lambda () (interactive) (find-file "~/Dropbox/Org/journals.org")))
+                (lambda () (interactive) (find-file "~/Documents/Org/journals.org")))
 (global-set-key (kbd "C-c n")
-                (lambda () (interactive) (find-file "~/Dropbox/Org/notes.org")))
+                (lambda () (interactive) (find-file "~/Documents/Org/notes.org")))
 (global-set-key (kbd "C-c r")
-                (lambda () (interactive) (find-file "~/Dropbox/Org/refiles.org")))
+                (lambda () (interactive) (find-file "~/Documents/Org/refiles.org")))
+(global-set-key (kbd "C-c d")
+                (lambda () (interactive) (find-file "~/Documents/Org/Daily.org")))
 
 ;; Org capture templates
 (setq org-capture-templates
       (quote (("t" "Tasks" entry
-               (file+headline "~/Dropbox/Org/refiles.org" "Inbox")
+               (file+headline "~/Documents/Org/refiles.org" "Inbox")
                "* TODO %^{Task}\nSCHEDULED: %^t\n%?\n")
               ("T" "Quick Tasks" entry
-               (file+headline "~/Dropbox/Org/refiles.org" "Inbox")
+               (file+headline "~/Documents/Org/refiles.org" "Inbox")
                "* TODO %^{Task}\n%t\n"
                :immediate-finish t)
               ("n" "Notes" entry
-               (file+headline "~/Dropbox/Org/refiles.org" "Notes")
+               (file+headline "~/Documents/Org/refiles.org" "Notes")
                "* %^{Note} \n%U\n%?")
               ("N" "Quick Notes" item
-               (file+headline "~/Dropbox/Org/refiles.org" "Notes"))
+               (file+headline "~/Documents/Org/refiles.org" "Notes"))
               ("j" "Journals" plain
-               (file+datetree "~/Dropbox/Org/journals.org")
+               (file+datetree "~/Documents/Org/journals.org")
                "**** %U %^{Title}\n%?"
                :unnarrowed t)
               )))
 
-(setq org-todo-keywords
-  '((sequence "TODO" "DOING" "POSTPONED" "DONE")))
 (setq org-todo-keyword-faces
-  '(("DOING" . "yellow") ("POSTPONED" . (:foreground "white" :background "red"))))
+  '(("HOLD" . (:foreground "white" :background "red"))))
+(setq org-todo-keywords
+  '((sequence "TODO" "HOLD" "DONE")))
+
+(setq org-fontify-done-headline t)
+(custom-set-faces
+ '(org-done ((t (:foreground "PaleGreen"
+                 :strike-through t))))
+ '(org-headline-done
+            ((t (:foreground "LightSalmon" :strike-through t)))))
 
 (require 'org-bullets)
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
@@ -294,7 +332,7 @@
 
 ;; MULTIPLE CURSORS
 (require 'multiple-cursors)
-(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+(global-set-key (kbd "C-c m c") 'mc/edit-lines)
 (global-set-key (kbd "C-}") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-{") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-{") 'mc/mark-all-like-this)
@@ -384,8 +422,8 @@
    [default bold shadow italic underline bold bold-italic bold])
  '(ansi-color-names-vector
    (vector "#4d4d4c" "#c82829" "#718c00" "#eab700" "#4271ae" "#8959a8" "#3e999f" "#d6d6d6"))
- '(cfs--current-profile "profile1" t)
- '(cfs--profiles-steps (quote (("profile1" . 6))) t)
+ ;; '(cfs--current-profile "profile1" t)
+ ;; '(cfs--profiles-steps (quote (("profile1" . 6))) t)
  '(custom-safe-themes
    (quote
 	("0c29db826418061b40564e3351194a3d4a125d182c6ee5178c237a7364f0ff12" default)))
@@ -394,7 +432,7 @@
  '(linum-relative-current-symbol "")
  '(linum-relative-global-mode t)
  '(markdown-enable-math t)
- '(org-agenda-files (quote ("~/Dropbox/Org/gtd.org")))
+ '(org-agenda-files (quote ("~/Documents/Org/Daily.org")))
  '(org-hide-emphasis-markers t)
  '(org-hide-leading-stars t)
  '(org-modules
