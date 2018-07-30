@@ -257,6 +257,7 @@
 (setq org-log-done 'time)
 (setq org-export-coding-system 'utf-8)
 (setq org-latex-inputenc-alist '(("utf8" . "utf8x")))
+(add-hook 'org-mode-hook 'toggle-truncate-lines)
 ;; Standard key bindings
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-ca" 'org-agenda)
